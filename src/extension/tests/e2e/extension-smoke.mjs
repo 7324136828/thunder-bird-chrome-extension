@@ -86,8 +86,11 @@ await new Promise((r) => server.listen(Number(backendPort), '127.0.0.1', r));
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'webmail-smoke-'));
 const child = spawn(browser, [
   `--user-data-dir=${profile}`, `--remote-debugging-port=${cdpPort}`, '--headless=new', '--no-first-run',
-  '--no-default-browser-check', '--enable-unsafe-extension-debugging', '--window-size=1400,900', 'about:blank',
-], { stdio: 'ignore' });
+  '--no-default-browser-check', '--enable-unsafe-extension-debugging', '--window-size=1400,900',
+  // GitHub's ubuntu-latest (24.04) blocks unprivileged user namespaces, so Chrome's sandbox cannot start there.
+  ...(process.env.CI ? ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'] : []),
+  'about:blank',
+], { stdio: ['ignore', 'ignore', process.env.CI ? 'inherit' : 'ignore'] });
 
 let version = null;
 for (let i = 0; i < 60 && !version; i += 1) {
