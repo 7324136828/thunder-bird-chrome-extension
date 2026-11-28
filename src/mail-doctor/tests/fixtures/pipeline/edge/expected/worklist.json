@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-11-27T05:29:08.192038+00:00",
+  "total_senders": 5,
+  "action_counts": {
+    "unsubscribe_and_purge": 0,
+    "unsubscribe": 0,
+    "review_delete": 0,
+    "review": 1,
+    "archive": 0,
+    "keep": 4
+  },
+  "items": [
+    {
+      "sender_group": "odd.example",
+      "recommended_action": "keep",
+      "message_count": 4,
+      "total_size_bytes": 741,
+      "first_seen": "",
+      "last_seen": "",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "b64@odd.example",
+        "broken@odd.example",
+        "fwd@odd.example",
+        "nc@odd.example"
+      ],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "mbox.example",
+      "recommended_action": "keep",
+      "message_count": 3,
+      "total_size_bytes": 425,
+      "first_seen": "",
+      "last_seen": "",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "crlf@mbox.example",
+        "second@mbox.example",
+        "third@mbox.example"
+      ],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "(unknown)",
+      "recommended_action": "keep",
+      "message_count": 1,
+      "total_size_bytes": 42,
+      "first_seen": "",
+      "last_seen": "",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "example.com",
+      "recommended_action": "keep",
+      "message_count": 1,
+      "total_size_bytes": 642,
+      "first_seen": "2024-08-12T05:00:00+00:00",
+      "last_seen": "2024-08-12T05:00:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "signer@secure.example.com"
+      ],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "example.net",
+      "recommended_action": "review",
+      "message_count": 1,
+      "total_size_bytes": 645,
+      "first_seen": "2024-08-11T23:59:59+00:00",
+      "last_seen": "2024-08-11T23:59:59+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "mailer-daemon@mx.example.net"
+      ],
+      "reason": "Likely automated sender",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Return-Path: <alice@example.com>
+Received: from smtp.example.com by mx.example.com; Mon, 13 Oct 2026 10:00:00 +0000
+Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+From: Alice <alice@example.com>
+To: <bob@example.com>
+Subject: Hello
+Date: Mon, 13 Oct 2026 10:00:00 +0000
+Message-ID: <abc@example.com>
+
+Plain body.

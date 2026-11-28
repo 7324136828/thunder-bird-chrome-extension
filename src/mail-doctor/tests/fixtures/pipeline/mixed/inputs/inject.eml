@@ -1,0 +1,8 @@
+From: "+cmd|' /C calc'!A0" <attacker@evil.example>
+To: user@test.local
+Subject: =SUM(A1:A9)
+Date: Sat, 10 Aug 24 12:00:00 EST
+Message-ID: <inj@evil.example>
+Content-Type: text/plain
+
+@SUM(1+1)*cmd|' /C calc'!A0

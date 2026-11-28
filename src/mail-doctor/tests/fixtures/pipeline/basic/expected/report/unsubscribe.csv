@@ -1,0 +1,2 @@
+sender_group,addresses,message_count,unsubscribe_link
+example.com,news@mail.example.com,12,https://mail.example.com/unsub?token=0

@@ -1,0 +1,1279 @@
+[
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "plain",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Caf\u00e9 cr\u00e8me\n",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "plain_nonascii",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 8bit\r\nMIME-Version: 1.0\r\n\r\nCaf\u00e9 cr\u00e8me\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "empty_text",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "a\r\nb\rc\n\nd  \n",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "crlf_cr",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\na\r\nb\r\nc\r\n\r\nd  \r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "hello   \nworld\t",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "trailing_ws",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nhello   \r\nworld\t\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "long_line",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "long_line_many",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyy\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "long_nonascii",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: base64\r\nMIME-Version: 1.0\r\n\r\nw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nD\r\nqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOp\r\nw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nD\r\nqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw6kK\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word \nword word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word \nword word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word \ncaf\u00e9",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "long_mixed",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\nword word word word word word word word word word word word word word word wo=\r\nrd word word word word word word word word word word word word word word word=\r\n word word word word word word word word word=20\r\nword word word word word word word word word word word word word word word wo=\r\nrd word word word word word word word word word word word word word word word=\r\n word word word word word word word word word=20\r\nword word word word word word word word word word word word word word word wo=\r\nrd word word word word word word word word word word word word word word word=\r\n word word word word word word word word word=20\r\ncaf=C3=A9\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b a=b ",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "qp_equals",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: base64\r\nMIME-Version: 1.0\r\n\r\nYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBh\r\nPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9YiBhPWIgYT1iIGE9\r\nYiBhPWIgCg==\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "<p>Hello <b>world</b></p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "html_text",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n<p>Hello <b>world</b></p>\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "",
+  "html": "<p>Only</p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "html_only",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n\r\n\r\n--B0\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n<p>Only</p>\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "<p>word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word </p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "html_long",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\n<p>word word word word word word word word word word word word word word word=\r\n word word word word word word word word word word word word word word word w=\r\nord word word word word word word word word word </p>\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "<p><img src=\"cid:logo@example.com\"></p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "logo.png",
+    "content_type": "image/png",
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9HQAAAABJRU5ErkJggg==",
+    "content_id": "logo@example.com",
+    "disposition": "inline"
+   }
+  ],
+  "name": "inline",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nMIME-Version: 1.0\r\nContent-Type: multipart/related;\r\n boundary=\"B1\"\r\n\r\n--B1\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<p><img src=\"cid:logo@example.com\"></p>\r\n\r\n--B1\r\nContent-Type: image/png\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: inline; filename=\"logo.png\"\r\nContent-ID: <logo@example.com>\r\nMIME-Version: 1.0\r\n\r\niVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9\r\nHQAAAABJRU5ErkJggg==\r\n\r\n--B1--\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "<p><img src=\"cid:a1\"><img src=\"cid:b2\"></p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "a.png",
+    "content_type": "image/png",
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9HQAAAABJRU5ErkJggg==",
+    "content_id": "a1",
+    "disposition": "inline"
+   },
+   {
+    "filename": "report.pdf",
+    "content_type": "application/pdf",
+    "data": "JVBERi0xLjQgdGVzdA==",
+    "content_id": "",
+    "disposition": "attachment"
+   },
+   {
+    "filename": "b.png",
+    "content_type": "image/png",
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9HQAAAABJRU5ErkJggg==",
+    "content_id": "b2",
+    "disposition": "inline"
+   }
+  ],
+  "name": "inline2_att",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B1\"\r\n\r\n--B1\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B1\r\nMIME-Version: 1.0\r\nContent-Type: multipart/related;\r\n boundary=\"B2\"\r\n\r\n--B2\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<p><img src=\"cid:a1\"><img src=\"cid:b2\"></p>\r\n\r\n--B2\r\nContent-Type: image/png\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: inline; filename=\"a.png\"\r\nContent-ID: <a1>\r\nMIME-Version: 1.0\r\n\r\niVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9\r\nHQAAAABJRU5ErkJggg==\r\n\r\n--B2\r\nContent-Type: image/png\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: inline; filename=\"b.png\"\r\nContent-ID: <b2>\r\nMIME-Version: 1.0\r\n\r\niVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z8DwHwAFAAH/iZk9\r\nHQAAAABJRU5ErkJggg==\r\n\r\n--B2--\r\n\r\n--B1--\r\n\r\n--B0\r\nContent-Type: application/pdf\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"report.pdf\"\r\nMIME-Version: 1.0\r\n\r\nJVBERi0xLjQgdGVzdA==\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "notes.txt",
+    "content_type": "text/plain",
+    "data": "aGVsbG8K",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_only",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"notes.txt\"\r\nMIME-Version: 1.0\r\n\r\naGVsbG8K\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "r\u00e9sum\u00e9.pdf",
+    "content_type": "application/pdf",
+    "data": "eA==",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_nonascii_name",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: application/pdf\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename*=utf-8''r%C3%A9sum%C3%A9.pdf\r\nMIME-Version: 1.0\r\n\r\neA==\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "a-very-long-file-name-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.pdf",
+    "content_type": "application/pdf",
+    "data": "eA==",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_long_name",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: application/pdf\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment;\r\n filename*0*=us-ascii''a-very-long-file-name-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;\r\n filename*1*=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.pdf\r\nMIME-Version: 1.0\r\n\r\neA==\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-\u00e9t\u00e9-.pdf",
+    "content_type": "application/pdf",
+    "data": "eA==",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_long_nonascii_name",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: application/pdf\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment;\r\n filename*0*=utf-8''%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-;\r\n filename*1*=%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t;\r\n filename*2*=%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-;\r\n filename*3*=%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t;\r\n filename*4*=%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-;\r\n filename*5*=%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t;\r\n filename*6*=%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-%C3%A9t%C3%A9-.pdf\r\nMIME-Version: 1.0\r\n\r\neA==\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "my \"quoted\" file x.txt",
+    "content_type": "text/plain",
+    "data": "eA==",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_quote_name",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"my \\\"quoted\\\" file x.txt\"\r\nMIME-Version: 1.0\r\n\r\neA==\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "m.eml",
+    "content_type": "message/rfc822",
+    "data": "U3ViamVjdDogeA0KDQpib2R5DQo=",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_eml",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"m.eml\"\r\nMIME-Version: 1.0\r\n\r\nU3ViamVjdDogeA0KDQpib2R5DQo=\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [
+   {
+    "filename": "big.bin",
+    "content_type": "application/octet-stream",
+    "data": "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",
+    "content_id": "",
+    "disposition": "attachment"
+   }
+  ],
+  "name": "att_big",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"big.bin\"\r\nMIME-Version: 1.0\r\n\r\nAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4\r\nOTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx\r\ncnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq\r\nq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj\r\n5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wABAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhsc\r\nHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RV\r\nVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2O\r\nj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqusra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbH\r\nyMnKy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8A\r\nAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5\r\nOjs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFy\r\nc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6Slpqeoqaqr\r\nrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk\r\n5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwd\r\nHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVW\r\nV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6P\r\nkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfI\r\nycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wAB\r\nAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6\r\nOzw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJz\r\ndHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqus\r\nra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl\r\n5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8AAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0e\r\nHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZX\r\nWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+Q\r\nkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJ\r\nysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAEC\r\nAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7\r\nPD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0\r\ndXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6yt\r\nrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm\r\n5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wABAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4f\r\nICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldY\r\nWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CR\r\nkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqusra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnK\r\ny8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8AAQID\r\nBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8\r\nPT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1\r\ndnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2u\r\nr7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn\r\n6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8g\r\nISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZ\r\nWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGS\r\nk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrL\r\nzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wABAgME\r\nBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9\r\nPj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2\r\nd3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqusra6v\r\nsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo\r\n6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8AAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAh\r\nIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFla\r\nW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKT\r\nlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvM\r\nzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAECAwQF\r\nBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+\r\nP0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3\r\neHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+w\r\nsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp\r\n6uvs7e7v8PHy8/T19vf4+fr7/P3+/wABAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEi\r\nIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpb\r\nXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOU\r\nlZaXmJmam5ydnp+goaKjpKWmp6ipqqusra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zN\r\nzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8AAQIDBAUG\r\nBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/\r\nQEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4\r\neXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7Cx\r\nsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq\r\n6+zt7u/w8fLz9PX29/j5+vv8/f7/AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIj\r\nJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltc\r\nXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SV\r\nlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3O\r\nz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wABAgMEBQYH\r\nCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9A\r\nQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5\r\nent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqusra6vsLGy\r\ns7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err\r\n7O3u7/Dx8vP09fb3+Pn6+/z9/v8AAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMk\r\nJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xd\r\nXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWW\r\nl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P\r\n0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAECAwQFBgcI\r\nCQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4OTo7PD0+P0BB\r\nQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6\r\ne3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKz\r\ntLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs\r\n7e7v8PHy8/T19vf4+fr7/P3+/wABAgMEBQYHCAkKCwwNDg8QERITFBUWFxgZGhscHR4fICEiIyQl\r\nJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1e\r\nX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaX\r\nmJmam5ydnp+goaKjpKWmp6ipqqusra6vsLGys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zNzs/Q\r\n0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8=\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Unicode subject caf\u00e9",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_nonascii",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Unicode subject =?utf-8?q?caf=C3=A9?=\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "This is a rather long subject line that will certainly need folding across lines ok",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_long",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: This is a rather long subject line that will certainly need folding\r\n across lines ok\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_longword",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: =?utf-8?q?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?=\r\n =?utf-8?q?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?=\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_empty",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject:\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "  lead  and  trail  ",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_spaces",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject:   lead  and  trail  \r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "Jane Doe",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "display_ascii",
+  "expected": "From: Jane Doe <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "Doe, Jane",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "display_special",
+  "expected": "From: \"Doe, Jane\" <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "user00@example.com",
+   "user01@example.com",
+   "user02@example.com",
+   "user03@example.com",
+   "user04@example.com",
+   "user05@example.com",
+   "user06@example.com",
+   "user07@example.com",
+   "user08@example.com",
+   "user09@example.com",
+   "user10@example.com",
+   "user11@example.com"
+  ],
+  "cc": [
+   "Cc Person <cc@example.com>"
+  ],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "recips_many",
+  "expected": "From: user@example.com\r\nTo: user00@example.com, user01@example.com, user02@example.com,\r\n user03@example.com, user04@example.com, user05@example.com,\r\n user06@example.com, user07@example.com, user08@example.com,\r\n user09@example.com, user10@example.com, user11@example.com\r\nCc: Cc Person <cc@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Jos\u00e9 P\u00e9rez <to@example.com>",
+   "to2@example.com"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "recips_nonascii",
+  "expected": "From: user@example.com\r\nTo: =?utf-8?q?Jos=C3=A9_P=C3=A9rez?= <to@example.com>, to2@example.com\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "\"Doe, John\" <john@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "recips_quoted",
+  "expected": "From: user@example.com\r\nTo: \"Doe, John\" <john@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "user@b\u00fccher.example"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "idn",
+  "expected": "From: user@example.com\r\nTo: user@b\u00fccher.example\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "Ren\u00e9",
+  "email": "user@example.com",
+  "to": [
+   "J\u00fcrgen <user@b\u00fccher.example>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Gr\u00fc\u00dfe",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "idn_display",
+  "expected": "From: Ren\u00e9 <user@example.com>\r\nTo: J\u00fcrgen <user@b\u00fccher.example>\r\nSubject: Gr\u00fc\u00dfe\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "<abc@example.com>",
+  "references": "<x@example.com> <abc@example.com>",
+  "attachments": [],
+  "name": "reply",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nIn-Reply-To: <abc@example.com>\r\nReferences: <x@example.com> <abc@example.com>\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "<abc@example.com>",
+  "references": "<msg000.something@example.com> <msg001.something@example.com> <msg002.something@example.com> <msg003.something@example.com> <msg004.something@example.com> <msg005.something@example.com> <msg006.something@example.com> <msg007.something@example.com>",
+  "attachments": [],
+  "name": "reply_long",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nIn-Reply-To: <abc@example.com>\r\nReferences: <msg000.something@example.com> <msg001.something@example.com>\r\n <msg002.something@example.com> <msg003.something@example.com>\r\n <msg004.something@example.com> <msg005.something@example.com>\r\n <msg006.something@example.com> <msg007.something@example.com>\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "<abc@example.com>",
+  "references": "",
+  "attachments": [],
+  "name": "reply_noref",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nIn-Reply-To: <abc@example.com>\r\nReferences: <abc@example.com>\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "<aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com>",
+  "references": "",
+  "attachments": [],
+  "name": "reply_longid",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nIn-Reply-To: <aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com>\r\nReferences: <aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com>\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "\"John\" <j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_quoted_simple",
+  "expected": "From: user@example.com\r\nTo: \"John\" <j@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "John<j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_nospace",
+  "expected": "From: user@example.com\r\nTo: John<j@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "  j@example.com  "
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_ws",
+  "expected": "From: user@example.com\r\nTo:   j@example.com  \r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "j@example.com (Work)"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_comment",
+  "expected": "From: user@example.com\r\nTo: j@example.com (Work)\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "<j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_angle_only",
+  "expected": "From: user@example.com\r\nTo: <j@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "John Q. Public <j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_name_dots",
+  "expected": null
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "John\tDoe <j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_tabs",
+  "expected": null
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "John    Doe   <j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_multi_space",
+  "expected": "From: user@example.com\r\nTo: John    Doe   <j@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "\"john doe\"@example.com"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_quoted_local",
+  "expected": null
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "user@[192.0.2.1]"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_literal",
+  "expected": "From: user@example.com\r\nTo: user@[192.0.2.1]\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Some Person Number 0 <person.number.0@example.com>",
+   "Some Person Number 1 <person.number.1@example.com>",
+   "Some Person Number 2 <person.number.2@example.com>",
+   "Some Person Number 3 <person.number.3@example.com>",
+   "Some Person Number 4 <person.number.4@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_long_list",
+  "expected": "From: user@example.com\r\nTo: Some Person Number 0 <person.number.0@example.com>,\r\n Some Person Number 1 <person.number.1@example.com>,\r\n Some Person Number 2 <person.number.2@example.com>,\r\n Some Person Number 3 <person.number.3@example.com>,\r\n Some Person Number 4 <person.number.4@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "=?utf-8?q?Jos=C3=A9?= <j@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_ew_name",
+  "expected": "From: user@example.com\r\nTo: =?utf-8?q?Jos=C3=A9?= <j@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "J@EXAMPLE.COM"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "r_upper",
+  "expected": "From: user@example.com\r\nTo: J@EXAMPLE.COM\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "Jane \"JD\" Doe",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "disp_quote",
+  "expected": "From: \"Jane \\\"JD\\\" Doe\" <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "Jane\\Doe",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "disp_backslash",
+  "expected": "From: \"Jane\\\\Doe\" <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "J. Doe",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "disp_dot",
+  "expected": "From: \"J. Doe\" <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "jane@home",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "disp_at",
+  "expected": "From: \"jane@home\" <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "  Jane  ",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "disp_spaces",
+  "expected": "From:   Jane   <user@example.com>\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "a\u0000b\u000bc\fd",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_nul",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\na\u0000b\u000bc\fd\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "From me\n>From you\n.\n..dots",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_from",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n>From me\r\n>From you\r\n.\r\n..dots\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "a\u2028b\u0085c\u2029d",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_u2028",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 8bit\r\nMIME-Version: 1.0\r\n\r\na\u2028b\u0085c\u2029d\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_long_word_line",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy=\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz=\r\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "\r\r\r",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_cr_only",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n\r\n\r\n\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "end\n\n\n",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_trailing_nl",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nend\r\n\r\n\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "",
+  "html": "<p>a</p>\r\n<p>b</p>\r",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "h_html_crlf",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n\r\n\r\n--B0\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\n<p>a</p>\r\n<p>b</p>\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "Plain reply",
+  "html": "<p>\u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 \u00e9t\u00e9 </p>",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "h_nonascii_long",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative;\r\n boundary=\"B0\"\r\n\r\n--B0\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nPlain reply\r\n\r\n--B0\r\nContent-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: base64\r\nMIME-Version: 1.0\r\n\r\nPHA+w6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kg\r\nw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0\r\nw6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kg\r\nw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0\r\nw6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kgw6l0w6kg\r\nw6l0w6kgw6l0w6kgw6l0w6kgPC9wPgo=\r\n\r\n--B0--\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\t\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy ",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_tab_end",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\t\r\nyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy \r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "Reply",
+  "text": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=bbbbbbbbbb\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc=\ndddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "t_eq_boundary",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: Reply\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: quoted-printable\r\nMIME-Version: 1.0\r\n\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=\r\n=3Dbbbbbbbbbb\r\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc=\r\n=3D\r\nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=\r\nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd=\r\ndddddddddddddddddddddddddddddddddddddddddddddd\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "a\tb",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_tabs",
+  "expected": null
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "   ",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_only_spaces",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject:    \r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ },
+ {
+  "display_name": "",
+  "email": "user@example.com",
+  "to": [
+   "Recipient <to@example.com>"
+  ],
+  "cc": [],
+  "bcc": [],
+  "subject": "short xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tail",
+  "text": "Plain reply",
+  "html": "",
+  "in_reply_to": "",
+  "references": "",
+  "attachments": [],
+  "name": "subject_long_ascii_word_mix",
+  "expected": "From: user@example.com\r\nTo: Recipient <to@example.com>\r\nSubject: short =?utf-8?q?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?=\r\n =?utf-8?q?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?= tail\r\nDate: X\r\nMessage-ID: X\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\nMIME-Version: 1.0\r\n\r\nPlain reply\r\n"
+ }
+]

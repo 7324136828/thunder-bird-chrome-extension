@@ -1,0 +1,70 @@
+[
+  [
+    "STAGE",
+    "extract"
+  ],
+  [
+    "PROGRESS",
+    5
+  ],
+  [
+    "LOG",
+    "Parsed 12 messages"
+  ],
+  [
+    "PROGRESS",
+    40
+  ],
+  [
+    "STAGE",
+    "group"
+  ],
+  [
+    "LOG",
+    "Applied 4 custom sender aliases"
+  ],
+  [
+    "PROGRESS",
+    55
+  ],
+  [
+    "STAGE",
+    "summarize"
+  ],
+  [
+    "LOG",
+    "Aggregated 12 messages across 7 sender groups"
+  ],
+  [
+    "LOG",
+    "Created recent-email briefing for 12 messages"
+  ],
+  [
+    "PROGRESS",
+    75
+  ],
+  [
+    "STAGE",
+    "worklist"
+  ],
+  [
+    "LOG",
+    "Worklist generated for 7 sender groups"
+  ],
+  [
+    "PROGRESS",
+    88
+  ],
+  [
+    "STAGE",
+    "report"
+  ],
+  [
+    "LOG",
+    "HTML report written: inbox_audit.html"
+  ],
+  [
+    "PROGRESS",
+    97
+  ]
+]

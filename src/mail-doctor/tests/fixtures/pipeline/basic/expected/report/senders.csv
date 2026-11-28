@@ -1,0 +1,3 @@
+rank,sender_group,message_count,total_size_bytes,distinct_addresses,first_seen,last_seen,unsubscribe_available,example_subjects
+1,example.com,12,3946,1,2024-08-05T10:00:00+00:00,2024-08-05T10:11:00+00:00,yes,Weekly digest 0 | Weekly digest 1 | Weekly digest 10
+2,friends.org,1,253,1,2024-08-06T09:15:00+00:00,2024-08-06T09:15:00+00:00,no,Lunch on Friday?

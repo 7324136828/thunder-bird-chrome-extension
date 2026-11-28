@@ -1,0 +1,25 @@
+From: Signer <signer@secure.example.com>
+Subject: =?ISO-8859-1?Q?Gr=FC=DFe?= signed
+Date: Mon, 12 Aug 2024 06:00:00 +0100
+Content-Type: multipart/signed; protocol="application/pgp-signature"; micalg=pgp-sha256; boundary="sig"
+
+--sig
+Content-Type: multipart/mixed; boundary="mix"
+
+--mix
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Smart =93quotes=94 and =80uro
+--mix
+Content-Type: application/octet-stream
+Content-Disposition: inline; filename*=utf-8''r%C3%A9sum%C3%A9.bin
+
+AAAA
+--mix--
+
+--sig
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+--sig--

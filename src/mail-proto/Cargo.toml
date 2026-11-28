@@ -1,0 +1,18 @@
+[package]
+name = "mail-proto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Blocking IMAP4rev1/POP3 protocol clients (imaplib/poplib style) and fake test servers"
+
+[features]
+# Fake in-process IMAP/POP3/SMTP servers for integration tests in other crates.
+testkit = []
+
+[dependencies]
+base64.workspace = true
+native-tls.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+lettre.workspace = true

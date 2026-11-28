@@ -1,0 +1,10 @@
+{
+  "corp.example.com": "group.example",
+  "evil.example": "evil.example",
+  "example.org": "example.org",
+  "friends.org": "friends.org",
+  "lists.example.org": "example.org",
+  "mail.example.com": "example.com",
+  "mailer.shop.example.co.uk": "example.co.uk",
+  "umlaut.de": "group.example"
+}

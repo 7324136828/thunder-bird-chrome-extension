@@ -1,0 +1,8 @@
+From: News <news@news.example>
+Subject: Weekly newsletter - 20% off
+Content-Type: text/html; charset=utf-8
+List-Unsubscribe: https://news.example/u
+Precedence: bulk
+
+<html><head><style>p{}</style></head><body><h1>Big   Sale</h1>
+<p>Get it <a href='https://news.example/sale'>here</a>.</p><a href="https://192.168.0.1:8443/x">https://news.example</a></body></html>

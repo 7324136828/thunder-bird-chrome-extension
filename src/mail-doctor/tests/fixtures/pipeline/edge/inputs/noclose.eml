@@ -1,0 +1,12 @@
+From: Noclose <nc@odd.example>
+Subject: missing close boundary
+Content-Type: multipart/alternative; boundary=zz
+
+--zz
+Content-Type: text/plain; charset=unknown-charset-xyz
+
+cannot decode this
+--zz
+Content-Type: text/plain
+
+second part never closes

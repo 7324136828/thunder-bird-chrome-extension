@@ -1,0 +1,20 @@
+From: =?utf-8?q?J=C3=B6rg_M=C3=BCller?= <Joerg.Mueller@Example.COM>
+To: "Doe, Jane" <JANE@example.org>, bob@example.net (Bob, B), Team: x@team.example, y@team.example;
+Cc: =?iso-8859-1?q?Andr=E9?= <andre@example.fr>,
+ undisclosed-recipients:;
+Reply-To: Support <support@mail.example.com>
+Subject: =?utf-8?b?R3LDvMOfZQ==?= and =?utf-8?q?more?=
+ =?utf-8?q?_text?= x=?utf-8?q?Y?=z
+Date: 13 Oct 2026 10:00:05 -0000
+Message-ID:  <id-1@mail.example.com> (comment)
+List-Unsubscribe: <mailto:unsub@example.com>, <https://example.com/unsub?id=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Mailer: =?utf-8?q?Mailer_=E2=9C=93?=
+X-Priority: 1 (Highest)
+Authentication-Results: mx1.example; spf=neutral smtp.mailfrom=example.com
+Authentication-Results: mx2.example; spf=pass smtp.mailfrom=Example.com;
+  dkim=PASS header.d=example.com header.i=@Example.com; dmarc=bestguesspass header.from=example.com
+Received: from a.example by b.example with LMTP for <x@y>; Tue, 14 Oct 2026 01:02:03 +0200
+Received: from c.example by a.example; 13 Oct 2026 22:00:00 -0100
+
+Body with https://example.com/path?x=1, and (https://paren.example) plus http://[::1]/x

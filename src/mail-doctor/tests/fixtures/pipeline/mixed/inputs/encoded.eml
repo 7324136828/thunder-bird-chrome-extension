@@ -1,0 +1,36 @@
+Return-Path: <bounce@mailer.shop.example.co.uk>
+From: =?utf-8?q?Caf=C3=A9_Shop?= <Offers@Mailer.Shop.Example.co.uk>
+To: "Doe, Jane" <jane@example.net>, bob@example.net
+Subject: =?utf-8?b?U3VwZXIgU2FsZSDwn46J?= =?utf-8?q?_today?=
+ only
+Date: Wed, 7 Aug 2024 18:30:00 +0200
+Message-ID:   <enc-1@shop.example.co.uk>
+List-Unsubscribe: <mailto:unsub@shop.example.co.uk>,
+ <https://shop.example.co.uk/u?id=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="outer"
+
+preamble text
+--outer
+Content-Type: multipart/alternative; boundary=inner
+
+--inner
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: base64
+
+R3L832UgYXVzIE38bmNoZW4hCiAgIFRzY2j8c3MgIAo=
+--inner
+Content-Type: text/html; charset=utf-8
+
+<p>HTML</p>
+--inner--
+
+--outer
+Content-Type: application/pdf; name="invoice.pdf"
+Content-Disposition: attachment; filename="invoice.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQK
+--outer--
+epilogue

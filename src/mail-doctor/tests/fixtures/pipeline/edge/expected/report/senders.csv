@@ -1,0 +1,6 @@
+rank,sender_group,message_count,total_size_bytes,distinct_addresses,first_seen,last_seen,unsubscribe_available,example_subjects
+1,odd.example,4,741,4,,,no,Fwd: attached | bad base64 | no boundary multipart
+2,mbox.example,3,425,3,,,no,"crlf mbox; with = semicolons; and, commas, in a long header line that keeps going on | no blank line before next From | third"
+3,(unknown),1,42,0,,,no,
+4,example.com,1,642,1,2024-08-12T05:00:00+00:00,2024-08-12T05:00:00+00:00,no,Grüße signed
+5,example.net,1,645,1,2024-08-11T23:59:59+00:00,2024-08-11T23:59:59+00:00,no,Undelivered Mail Returned to Sender

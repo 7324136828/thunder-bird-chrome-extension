@@ -1,0 +1,9 @@
+rank,sender_group,message_count,total_size_bytes,distinct_addresses,first_seen,last_seen,unsubscribe_available,example_subjects
+1,(unknown),2,252,0,2024-08-07T00:00:00+00:00,2024-08-07T00:00:00+00:00,no,Raw ��n��code subject
+2,example.com,2,912,1,2024-08-05T10:00:00+00:00,2024-08-05T10:07:00+00:00,yes,"Weekly digest 7 | Weekly digest
+ folded continuation"
+3,example.org,2,588,2,2024-08-06T09:00:00+00:00,2024-08-11T02:30:00+00:00,no,"Digest, Vol 1 | café and more"
+4,friends.org,2,506,1,2024-08-06T09:15:00+00:00,2024-08-06T09:15:00+00:00,no,Lunch on Friday? | Lunch on Friday?
+5,group.example,2,710,2,2024-08-08T14:05:09+00:00,2024-08-08T14:05:09+00:00,yes,"Prüfung ✓ =HYPERLINK(""x"") | Status =?bad?x?zz?= update, naïve"
+6,evil.example,1,211,1,2024-08-10T17:00:00+00:00,2024-08-10T17:00:00+00:00,no,'=SUM(A1:A9)
+7,example.co.uk,1,1016,1,2024-08-07T16:30:00+00:00,2024-08-07T16:30:00+00:00,yes,Super Sale 🎉 today only

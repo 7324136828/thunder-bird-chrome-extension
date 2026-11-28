@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-11-27T05:07:05.984996+00:00",
+  "total_senders": 7,
+  "action_counts": {
+    "unsubscribe_and_purge": 0,
+    "unsubscribe": 2,
+    "review_delete": 0,
+    "review": 1,
+    "archive": 1,
+    "keep": 3
+  },
+  "items": [
+    {
+      "sender_group": "(unknown)",
+      "recommended_action": "keep",
+      "message_count": 2,
+      "total_size_bytes": 252,
+      "first_seen": "2024-08-07T00:00:00+00:00",
+      "last_seen": "2024-08-07T00:00:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "example.com",
+      "recommended_action": "unsubscribe",
+      "message_count": 2,
+      "total_size_bytes": 912,
+      "first_seen": "2024-08-05T10:00:00+00:00",
+      "last_seen": "2024-08-05T10:07:00+00:00",
+      "has_unsubscribe": true,
+      "unsubscribe_link": "https://mail.example.com/unsub?token=7",
+      "addresses": [
+        "news@mail.example.com"
+      ],
+      "reason": "Sender advertises an unsubscribe link",
+      "note": ""
+    },
+    {
+      "sender_group": "example.org",
+      "recommended_action": "keep",
+      "message_count": 2,
+      "total_size_bytes": 588,
+      "first_seen": "2024-08-06T09:00:00+00:00",
+      "last_seen": "2024-08-11T02:30:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "digest-noreply@lists.example.org",
+        "jurgen@example.org"
+      ],
+      "reason": "User annotation override",
+      "note": "Friends & family"
+    },
+    {
+      "sender_group": "friends.org",
+      "recommended_action": "archive",
+      "message_count": 2,
+      "total_size_bytes": 506,
+      "first_seen": "2024-08-06T09:15:00+00:00",
+      "last_seen": "2024-08-06T09:15:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "alice@friends.org"
+      ],
+      "reason": "User annotation override",
+      "note": ""
+    },
+    {
+      "sender_group": "group.example",
+      "recommended_action": "unsubscribe",
+      "message_count": 2,
+      "total_size_bytes": 710,
+      "first_seen": "2024-08-08T14:05:09+00:00",
+      "last_seen": "2024-08-08T14:05:09+00:00",
+      "has_unsubscribe": true,
+      "unsubscribe_link": "https://plain.example.com/unsub",
+      "addresses": [
+        "j@umlaut.de",
+        "john.smith@corp.example.com"
+      ],
+      "reason": "Sender advertises an unsubscribe link",
+      "note": "['a', 1, None, True, 1.5]"
+    },
+    {
+      "sender_group": "evil.example",
+      "recommended_action": "keep",
+      "message_count": 1,
+      "total_size_bytes": 211,
+      "first_seen": "2024-08-10T17:00:00+00:00",
+      "last_seen": "2024-08-10T17:00:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "attacker@evil.example"
+      ],
+      "reason": "Low-volume human sender",
+      "note": ""
+    },
+    {
+      "sender_group": "example.co.uk",
+      "recommended_action": "review",
+      "message_count": 1,
+      "total_size_bytes": 1016,
+      "first_seen": "2024-08-07T16:30:00+00:00",
+      "last_seen": "2024-08-07T16:30:00+00:00",
+      "has_unsubscribe": true,
+      "unsubscribe_link": "mailto:unsub@shop.example.co.uk",
+      "addresses": [
+        "offers@mailer.shop.example.co.uk"
+      ],
+      "reason": "User annotation override",
+      "note": ""
+    }
+  ]
+}

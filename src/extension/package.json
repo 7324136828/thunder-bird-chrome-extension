@@ -1,0 +1,30 @@
+{
+  "name": "thunderbird-webmail-extension",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Chrome/Edge Manifest V3 extension hosting the Thunderbird-style webmail UI, backed by the local Rust mail backend.",
+  "scripts": {
+    "dev": "vite --config app/vite.config.ts",
+    "typecheck": "tsc -b app",
+    "build": "vite build --config app/vite.config.ts",
+    "build:extension": "npm run typecheck && npm run build && node tools/build-extension.mjs",
+    "icons": "node tools/gen-icons.mjs",
+    "test": "node --test \"tests/*.test.ts\"",
+    "test:e2e": "node tests/e2e/extension-smoke.mjs",
+    "test:e2e:real": "node tests/e2e/extension-real-backend.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.8",
+    "@types/node": "^26.5.1",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.3"
+  }
+}

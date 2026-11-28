@@ -1,0 +1,39 @@
+Ignored preamble line before the first separator
+From MAILER-DAEMON Mon Aug  5 10:00:00 2024
+From: Newsletter Bot <news@Mail.Example.com>
+Subject: Weekly digest
+ folded continuation
+Date: Mon, 05 Aug 2024 10:00:00 +0000
+Message-ID: <mbox1@mail.example.com>
+List-Unsubscribe: <https://mail.example.com/unsub?token=a>
+X-Long-Header: aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii jjjj kkkk llll mmmm nnnn oooo pppp
+X-Long-Token: <tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt>
+X-Params: alpha=1; beta=2; gamma=3; delta=4; epsilon=5; zeta=6; eta=7; theta=8; iota=9
+Content-Type: text/plain
+
+Hello
+>From the archive
+body
+
+From someone@example.org Tue Aug  6 09:00:00 2024
+From: =?iso-8859-1?q?J=FCrgen?= <jurgen@example.org>
+Subject: =?utf-8?q?caf=C3=A9?= and more
+Date: Tue, 06 Aug 2024 09:00:00 -0000
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset=utf-8
+
+Plain part
+--b1
+Content-Type: text/html
+
+<b>x</b>
+--b1--
+
+From x@y Wed Aug  7 00:00:00 2024
+From: Raw Ünïcode <raw@eight.example>
+Subject: Raw Ünïcode subject
+Date: Wed, 07 Aug 2024 00:00:00 +0000
+
+Body ✓

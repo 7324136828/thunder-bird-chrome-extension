@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Webmail (Thunderbird-style)",
+  "short_name": "Webmail",
+  "version": "0.1.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqhS1rfQVmqPBori40aUSBokm56dyK3Ss1oAuW4s3Dz6IhVpI1WKu3b+UOGd8v4/pfZC3ISmZPo7eR6uajdTRByBD0CWWE+EW60wN9bssWq0VyJ99Nh4gkEfRk5M7SsvYv59MPJUNs0l6UKMuPEX7Jhzhr9CMU8fMeNmj2h3gZADLyB1QVVT0cQ/Ofoe/5cH7moJT/URj5VsqrIeFkTqmUKvM1A//UHfo2SZ4yZy+SaX7OG2q52vYYNohb8hFEjihpjR+iaYYMl9XtMp75fnMiGOf39HjB20bvBpQzjQ6sGNlzG8hs1cFjPZvrHwKpjjDUh7A3ldZ6Jr3dGMjwEjjDwIDAQAB",
+  "minimum_chrome_version": "116",
+  "description": "Thunderbird-style three-pane webmail for IMAP/POP3/SMTP accounts, served by a local Rust mail backend.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Open Webmail",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "sandbox": {
+    "pages": [
+      "frame-host.html"
+    ]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'self'; img-src 'self' data: blob:; frame-src 'self'; form-action 'none'; connect-src 'self' http://127.0.0.1:* http://localhost:*",
+    "sandbox": "sandbox allow-scripts; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'; connect-src 'none'; img-src data:; font-src 'none'; media-src 'none'; worker-src 'none'"
+  }
+}

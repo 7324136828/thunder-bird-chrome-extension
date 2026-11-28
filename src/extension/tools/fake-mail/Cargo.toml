@@ -1,0 +1,15 @@
+# Fake IMAP + SMTP servers (mail-proto testkit) for tests/e2e/extension-real-backend.mjs.
+# Deliberately NOT a member of the src/ workspace: test-only tool with its own
+# lock file and target directory. Prints "IMAP <port> SMTP <port>" and then one
+# "SMTP-MAIL ..." line per received message.
+[package]
+name = "webmail-e2e-fake-mail"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "GPL-3.0-only"
+
+[workspace]
+
+[dependencies]
+mail-proto = { path = "../../../mail-proto", features = ["testkit"] }

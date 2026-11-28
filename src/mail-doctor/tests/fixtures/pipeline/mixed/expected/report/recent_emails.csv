@@ -1,0 +1,14 @@
+date,from,sender_group,subject,snippet
+2024-08-11T02:30:00+00:00,Digest Robot,example.org,"Digest, Vol 1",Inner digest body text.
+2024-08-10T17:00:00+00:00,'+cmd|' /C calc'!A0,evil.example,'=SUM(A1:A9),'@SUM(1+1)*cmd|' /C calc'!A0
+2024-08-08T14:05:09+00:00,J. Smith (Work),group.example,"Status =?bad?x?zz?= update, naïve","Café notes: this line is soft broken and = sign, broken =ZZ escape second line with tabs"
+2024-08-07T16:30:00+00:00,Café Shop,example.co.uk,Super Sale 🎉 today only,Grüße aus München! Tschüss
+2024-08-07T00:00:00+00:00,(unknown),(unknown),Raw ��n��code subject,Body ✓
+2024-08-06T09:15:00+00:00,Alice Smith,friends.org,Lunch on Friday?,Are you still up for lunch on Friday?
+2024-08-06T09:15:00+00:00,Alice Smith,friends.org,Lunch on Friday?,Are you still up for lunch on Friday?
+2024-08-06T09:00:00+00:00,Jürgen,example.org,café and more,Plain part
+2024-08-05T10:07:00+00:00,Newsletter Bot,example.com,Weekly digest 7,"Hello, here is your weekly digest number 7."
+2024-08-05T10:00:00+00:00,Newsletter Bot,example.com,"Weekly digest
+ folded continuation",Hello >From the archive body
+,Jürgen Größe,group.example,"Prüfung ✓ =HYPERLINK(""x"")","'=Formula,with ""quotes"" and ünïcödé"
+,(unknown),(unknown),(no subject),

@@ -1,0 +1,10 @@
+From: Newsletter Bot <news@mail.example.com>
+To: user@test.local
+Subject: Weekly digest 1
+Date: Mon, 05 Aug 2024 10:01:00 +0000
+Message-ID: <msg1@mail.example.com>
+List-Unsubscribe: <https://mail.example.com/unsub?token=1>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello, here is your weekly digest number 1.

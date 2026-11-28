@@ -1,0 +1,39 @@
+Return-Path: <bounce@bounces.example>
+Received: from mail.evil.example (mail.evil.example [10.0.0.1])
+        by mx.example.com with ESMTPS id abc123
+        for <user@example.com>; Mon, 13 Oct 2026 10:00:05 +0000
+Received: from phishing.host (phishing.host [10.0.0.2])
+        by mail.evil.example with SMTP id def456;
+        Mon, 13 Oct 2026 09:59:50 +0000
+Authentication-Results: mx.example.com;
+        spf=fail smtp.mailfrom=evil.example;
+        dkim=none;
+        dmarc=fail header.from=bank.example
+From: "Bank Support <support@bank.example>" <forged@evil.example>
+Reply-To: <helpdesk@other.example>
+To: <user@example.com>
+Subject: Urgent: verify your account
+Date: Mon, 13 Oct 2026 09:59:40 +0000
+Message-ID: <deadbeef@evil.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUND"
+
+--BOUND
+Content-Type: text/plain; charset="utf-8"
+
+Click http://185.10.20.30/login to verify.
+Also see https://bank.example/secure and https://xn--bnk-xua.example/.
+
+--BOUND
+Content-Type: text/html; charset="utf-8"
+
+<a href="http://185.10.20.30/login">https://bank.example</a>
+
+--BOUND
+Content-Type: application/octet-stream; name="invoice.pdf.exe"
+Content-Disposition: attachment; filename="invoice.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVo=
+
+--BOUND--

@@ -1,0 +1,6 @@
+sender_group,recommended_action,message_count,total_size_bytes,first_seen,last_seen,has_unsubscribe,unsubscribe_link,addresses,reason,note
+odd.example,keep,4,741,,,no,,b64@odd.example;broken@odd.example;fwd@odd.example;nc@odd.example,Low-volume human sender,
+mbox.example,keep,3,425,,,no,,crlf@mbox.example;second@mbox.example;third@mbox.example,Low-volume human sender,
+(unknown),keep,1,42,,,no,,,Low-volume human sender,
+example.com,keep,1,642,2024-08-12T05:00:00+00:00,2024-08-12T05:00:00+00:00,no,,signer@secure.example.com,Low-volume human sender,
+example.net,review,1,645,2024-08-11T23:59:59+00:00,2024-08-11T23:59:59+00:00,no,,mailer-daemon@mx.example.net,Likely automated sender,

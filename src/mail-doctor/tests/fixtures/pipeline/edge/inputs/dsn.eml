@@ -1,0 +1,30 @@
+From: Mail Delivery System <MAILER-DAEMON@mx.example.net>
+To: user@test.local
+Subject: Undelivered Mail Returned to Sender
+Date: Sun, 11 Aug 2024 23:59:59 +0000
+Content-Type: multipart/report; report-type=delivery-status; boundary="r1"
+
+--r1
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host mx.example.net.
+
+--r1
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mx.example.net
+
+Final-Recipient: rfc822; nobody@example.org
+Action: failed
+Status: 5.1.1
+
+--r1
+Content-Type: message/rfc822
+
+From: user@test.local
+Subject: original
+Content-Type: text/plain
+
+original body
+--r1--

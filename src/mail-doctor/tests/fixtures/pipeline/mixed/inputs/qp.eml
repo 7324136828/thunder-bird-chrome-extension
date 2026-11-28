@@ -1,0 +1,12 @@
+From: "J. Smith (Work)" <john.smith@corp.example.com>
+To: Team <team@corp.example.com>
+Subject: Status =?bad?x?zz?= update, =?utf-8?q?na=C3=AFve?=
+Date: Thu, 08 Aug 2024 07:05:09 -0700 (PDT)
+Message-ID: <qp-1@corp.example.com>
+List-Unsubscribe: https://plain.example.com/unsub
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+   Caf=C3=A9 notes: this line is soft=
+ broken and =3D sign, broken =ZZ escape=
+=0A second   line	with tabs

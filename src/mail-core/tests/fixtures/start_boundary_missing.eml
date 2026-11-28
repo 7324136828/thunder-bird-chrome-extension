@@ -1,0 +1,5 @@
+From: a@b.example
+Content-Type: multipart/alternative; boundary=zz
+
+no parts here
+--zz--

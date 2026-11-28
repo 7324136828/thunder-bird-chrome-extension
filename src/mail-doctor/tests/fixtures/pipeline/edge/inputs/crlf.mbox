@@ -1,0 +1,26 @@
+From x@y Mon Aug  5 10:00:00 2024
+From: Crlf Sender <crlf@mbox.example>
+Subject: crlf mbox; with = semicolons; and, commas, in a long header line that keeps going on
+X-Folded: first
+ second
+Content-Type: multipart/mixed; boundary="q"
+
+pre
+--q
+Content-Type: text/plain
+
+CRLF body
+--q--
+epi
+
+From y@z Tue Aug  6 10:00:00 2024
+Subject: no blank line before next From
+From: Second <second@mbox.example>
+
+body two
+From z@z Wed Aug  7 10:00:00 2024
+From: Third <third@mbox.example>
+Subject: =?utf-8?q?third?=
+X-Embedded: value
+
+last

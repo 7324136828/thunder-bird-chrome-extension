@@ -1,0 +1,8 @@
+From: a@b.example
+Content-Type: multipart/mixed
+
+--x
+Content-Type: text/plain
+
+hi
+--x--

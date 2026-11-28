@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-11-27T05:29:08.184027+00:00",
+  "total_messages": 10,
+  "unique_senders": 5,
+  "unique_domains": 4,
+  "date_range": {
+    "first": "2024-08-11T23:59:59+00:00",
+    "last": "2024-08-12T05:00:00+00:00"
+  },
+  "total_size_bytes": 2495,
+  "messages_with_unsubscribe": 0,
+  "senders_with_unsubscribe": 0,
+  "top_senders": [
+    {
+      "sender": "odd.example",
+      "messages": 4,
+      "size_bytes": 741
+    },
+    {
+      "sender": "mbox.example",
+      "messages": 3,
+      "size_bytes": 425
+    },
+    {
+      "sender": "(unknown)",
+      "messages": 1,
+      "size_bytes": 42
+    },
+    {
+      "sender": "example.com",
+      "messages": 1,
+      "size_bytes": 642
+    },
+    {
+      "sender": "example.net",
+      "messages": 1,
+      "size_bytes": 645
+    }
+  ]
+}

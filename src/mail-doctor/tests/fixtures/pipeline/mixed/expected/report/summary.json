@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-11-27T05:07:05.973895+00:00",
+  "total_messages": 12,
+  "unique_senders": 7,
+  "unique_domains": 8,
+  "date_range": {
+    "first": "2024-08-05T10:00:00+00:00",
+    "last": "2024-08-11T02:30:00+00:00"
+  },
+  "total_size_bytes": 4195,
+  "messages_with_unsubscribe": 4,
+  "senders_with_unsubscribe": 3,
+  "top_senders": [
+    {
+      "sender": "(unknown)",
+      "messages": 2,
+      "size_bytes": 252
+    },
+    {
+      "sender": "example.com",
+      "messages": 2,
+      "size_bytes": 912
+    },
+    {
+      "sender": "example.org",
+      "messages": 2,
+      "size_bytes": 588
+    },
+    {
+      "sender": "friends.org",
+      "messages": 2,
+      "size_bytes": 506
+    },
+    {
+      "sender": "group.example",
+      "messages": 2,
+      "size_bytes": 710
+    },
+    {
+      "sender": "evil.example",
+      "messages": 1,
+      "size_bytes": 211
+    },
+    {
+      "sender": "example.co.uk",
+      "messages": 1,
+      "size_bytes": 1016
+    }
+  ]
+}

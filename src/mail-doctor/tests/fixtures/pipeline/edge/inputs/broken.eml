@@ -1,0 +1,5 @@
+From: Broken <broken@odd.example>
+Subject: no boundary multipart
+Content-Type: multipart/mixed
+
+just text, no boundary at all

@@ -1,0 +1,19 @@
+From: a@b.example
+Subject: s3
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="b"
+
+--b
+Content-Type: text/html
+
+<p>x</p>
+--b
+Content-Type: application/pdf
+Content-Disposition: attachment; filename*="utf-8''"
+
+PDF
+--b
+Content-Type: text/plain
+
+later text
+--b--

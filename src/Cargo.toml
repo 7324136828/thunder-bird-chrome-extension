@@ -1,0 +1,57 @@
+[workspace]
+members = [
+    "mail-proto",
+    "mail-core",
+    "mail-doctor",
+    "mail-backend",
+    "mail-mcp",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-only"
+
+# Shared dependency versions. Crate-specific extras may be added to an
+# individual crate with `cargo add -p <crate> <dep>`.
+[workspace.dependencies]
+mail-proto = { path = "mail-proto" }
+mail-core = { path = "mail-core" }
+mail-doctor = { path = "mail-doctor" }
+anyhow = "1.0"
+axum = { version = "0.8", features = ["multipart"] }
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+chrono-tz = "0.10"
+futures-util = "0.3"
+hex = "0.4"
+html-escape = "0.2"
+idna = "1"
+lettre = { version = "0.11", default-features = false, features = ["builder", "smtp-transport", "native-tls", "hostname"] }
+mail-parser = "0.11"
+mime = "0.3"
+mime_guess = "2.0"
+native-tls = "0.2"
+percent-encoding = "2.3"
+regex = "1.11"
+reqwest = { version = "0.12", default-features = false, features = ["json", "native-tls", "blocking", "multipart", "stream"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+sha2 = "0.10"
+tempfile = "3"
+thiserror = "2.0"
+tokio = { version = "1", features = ["full"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["cors", "catch-panic", "limit"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = "2.5"
+uuid = { version = "1", features = ["v4"] }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

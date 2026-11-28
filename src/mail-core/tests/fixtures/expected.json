@@ -1,0 +1,1894 @@
+{
+ "broken": {
+  "header_view": {
+   "subject": "Broken ét�",
+   "from_name": "Person",
+   "from_addr": "person@example.com",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "",
+   "html_body": "",
+   "attachments": [],
+   "snippet": ""
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Broken ét�",
+   "from_name": "Person",
+   "from_addr": "person@example.com",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "softfail",
+    "dkim": "temperror",
+    "dmarc": "weird",
+    "raw": [
+     "mx; spf=softfail; dkim=temperror; dmarc=weird"
+    ]
+   },
+   "sender": {
+    "from_domain": "example.com",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 3,
+    "delivery_seconds": null,
+    "hops": [
+     {
+      "index": 0,
+      "from": "",
+      "by": "host.example",
+      "with": "",
+      "for": "",
+      "timestamp": null
+     },
+     {
+      "index": 1,
+      "from": "",
+      "by": "host2.example",
+      "with": "",
+      "for": "",
+      "timestamp": null
+     },
+     {
+      "index": 2,
+      "from": "x.example",
+      "by": "",
+      "with": "",
+      "for": "",
+      "timestamp": null
+     }
+    ]
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "alert",
+     "title": "DKIM failed",
+     "detail": "DKIM reported 'temperror' - the message may be forged."
+    },
+    {
+     "severity": "warn",
+     "title": "SPF inconclusive",
+     "detail": "SPF reported 'softfail'."
+    },
+    {
+     "severity": "warn",
+     "title": "DMARC inconclusive",
+     "detail": "DMARC reported 'weird'."
+    },
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    }
+   ],
+   "risk_score": 80,
+   "verdict": "high",
+   "snippet": ""
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": "Broken ét�"
+ },
+ "clean": {
+  "header_view": {
+   "subject": "Hello",
+   "from_name": "Alice",
+   "from_addr": "alice@example.com",
+   "to": "bob@example.com",
+   "cc": "",
+   "date": "2026-10-13T10:00:00+00:00",
+   "message_id": "<abc@example.com>",
+   "text_body": "Plain body.\r\n",
+   "html_body": "",
+   "attachments": [],
+   "snippet": "Plain body."
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Hello",
+   "from_name": "Alice",
+   "from_addr": "alice@example.com",
+   "to": "bob@example.com",
+   "date": "2026-10-13T10:00:00+00:00",
+   "message_id": "<abc@example.com>",
+   "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass",
+    "raw": [
+     "mx.example.com; spf=pass; dkim=pass; dmarc=pass"
+    ]
+   },
+   "sender": {
+    "from_domain": "example.com",
+    "reply_to": "",
+    "return_path": "alice@example.com",
+    "message_id_domain": "example.com",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 1,
+    "delivery_seconds": null,
+    "hops": [
+     {
+      "index": 0,
+      "from": "smtp.example.com",
+      "by": "mx.example.com",
+      "with": "",
+      "for": "",
+      "timestamp": "2026-10-13T10:00:00+00:00"
+     }
+    ]
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "pass",
+     "title": "SPF passed",
+     "detail": "The sending infrastructure was authorized for SPF."
+    },
+    {
+     "severity": "pass",
+     "title": "DKIM passed",
+     "detail": "The sending infrastructure was authorized for DKIM."
+    },
+    {
+     "severity": "pass",
+     "title": "DMARC passed",
+     "detail": "The sending infrastructure was authorized for DMARC."
+    }
+   ],
+   "risk_score": 0,
+   "verdict": "low",
+   "snippet": "Plain body."
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [
+   {
+    "name": "",
+    "address": "bob@example.com"
+   }
+  ],
+  "addresses_cc": [],
+  "subject_header": "Hello"
+ },
+ "digest": {
+  "header_view": {
+   "subject": "Digest",
+   "from_name": "",
+   "from_addr": "list@example.com",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "first digest body https://one.example",
+   "html_body": "",
+   "attachments": [],
+   "snippet": "first digest body https://one.example"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Digest",
+   "from_name": "",
+   "from_addr": "list@example.com",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "example.com",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [
+    {
+     "url": "https://one.example",
+     "domain": "one.example",
+     "label": ""
+    }
+   ],
+   "link_count": 1,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": "first digest body https://one.example"
+  },
+  "links": [
+   {
+    "url": "https://one.example",
+    "domain": "one.example",
+    "label": ""
+   }
+  ],
+  "walk": [
+   {
+    "type": "multipart/digest",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "message/rfc822",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "message/delivery-status",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": "Digest"
+ },
+ "empty": {
+  "header_view": {
+   "subject": "",
+   "from_name": "",
+   "from_addr": "",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "",
+   "html_body": "",
+   "attachments": [],
+   "snippet": ""
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "",
+   "from_name": "",
+   "from_addr": "",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": ""
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": null
+ },
+ "encoded_headers": {
+  "header_view": {
+   "subject": "Grüße and more text xYz",
+   "from_name": "Jörg Müller",
+   "from_addr": "joerg.mueller@example.com",
+   "to": "Doe, Jane <jane@example.org>, bob@example.net, x@team.example, y@team.example",
+   "cc": "André <andre@example.fr>",
+   "date": "2026-10-13T10:00:05",
+   "message_id": "<id-1@mail.example.com> (comment)",
+   "text_body": "Body with https://example.com/path?x=1, and (https://paren.example) plus http://[::1]/x\r\n",
+   "html_body": "",
+   "attachments": [],
+   "snippet": "Body with https://example.com/path?x=1, and (https://paren.example) plus http://[::1]/x"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Grüße and more text xYz",
+   "from_name": "Jörg Müller",
+   "from_addr": "joerg.mueller@example.com",
+   "to": "Doe, Jane <jane@example.org>, bob@example.net, x@team.example, y@team.example",
+   "date": "2026-10-13T10:00:05",
+   "message_id": "<id-1@mail.example.com> (comment)",
+   "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "bestguesspass",
+    "raw": [
+     "mx1.example; spf=neutral smtp.mailfrom=example.com",
+     "mx2.example; spf=pass smtp.mailfrom=Example.com;  dkim=PASS header.d=example.com header.i=@Example.com; dmarc=bestguesspass header.from=example.com"
+    ]
+   },
+   "sender": {
+    "from_domain": "example.com",
+    "reply_to": "support@mail.example.com",
+    "return_path": "",
+    "message_id_domain": "mail.example.com> (comment)",
+    "x_mailer": "Mailer ✓",
+    "importance": "1 (Highest)"
+   },
+   "routing": {
+    "hop_count": 2,
+    "delivery_seconds": 123.0,
+    "hops": [
+     {
+      "index": 0,
+      "from": "a.example",
+      "by": "b.example",
+      "with": "LMTP",
+      "for": "",
+      "timestamp": "2026-10-14T01:02:03+02:00"
+     },
+     {
+      "index": 1,
+      "from": "c.example",
+      "by": "a.example",
+      "with": "",
+      "for": "",
+      "timestamp": "2026-10-13T22:00:00-01:00"
+     }
+    ]
+   },
+   "links": [
+    {
+     "url": "https://example.com/path?x=1",
+     "domain": "example.com",
+     "label": ""
+    },
+    {
+     "url": "https://paren.example",
+     "domain": "paren.example",
+     "label": ""
+    }
+   ],
+   "link_count": 2,
+   "attachments": [],
+   "unsubscribe": {
+    "present": true,
+    "link": "mailto:unsub@example.com",
+    "one_click": true
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "DMARC inconclusive",
+     "detail": "DMARC reported 'bestguesspass'."
+    },
+    {
+     "severity": "info",
+     "title": "Message-ID domain differs",
+     "detail": "Message-ID was minted by mail.example.com> (comment), not example.com."
+    },
+    {
+     "severity": "info",
+     "title": "Bulk-mail unsubscribe",
+     "detail": "A List-Unsubscribe method is present (mailing-list style)."
+    },
+    {
+     "severity": "pass",
+     "title": "SPF passed",
+     "detail": "The sending infrastructure was authorized for SPF."
+    },
+    {
+     "severity": "pass",
+     "title": "DKIM passed",
+     "detail": "The sending infrastructure was authorized for DKIM."
+    }
+   ],
+   "risk_score": 19,
+   "verdict": "low",
+   "snippet": "Body with https://example.com/path?x=1, and (https://paren.example) plus http://[::1]/x"
+  },
+  "links": [
+   {
+    "url": "https://example.com/path?x=1",
+    "domain": "example.com",
+    "label": ""
+   },
+   {
+    "url": "https://paren.example",
+    "domain": "paren.example",
+    "label": ""
+   }
+  ],
+  "walk": [
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [
+   {
+    "name": "Doe, Jane",
+    "address": "jane@example.org"
+   },
+   {
+    "name": "",
+    "address": "bob@example.net"
+   },
+   {
+    "name": "",
+    "address": "x@team.example"
+   },
+   {
+    "name": "",
+    "address": "y@team.example"
+   }
+  ],
+  "addresses_cc": [
+   {
+    "name": "André",
+    "address": "andre@example.fr"
+   }
+  ],
+  "subject_header": "Grüße and more text xYz"
+ },
+ "html_only": {
+  "header_view": {
+   "subject": "Weekly newsletter - 20% off",
+   "from_name": "News",
+   "from_addr": "news@news.example",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "",
+   "html_body": "<html><head><style>p{}</style></head><body><h1>Big   Sale</h1>\r\n<p>Get it <a href='https://news.example/sale'>here</a>.</p><a href=\"https://192.168.0.1:8443/x\">https://news.example</a></body></html>\r\n",
+   "attachments": [],
+   "snippet": "p{} Big Sale Get it here . https://news.example"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Weekly newsletter - 20% off",
+   "from_name": "News",
+   "from_addr": "news@news.example",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "news.example",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [
+    {
+     "url": "https://news.example/sale",
+     "domain": "news.example",
+     "label": "here"
+    },
+    {
+     "url": "https://192.168.0.1:8443/x",
+     "domain": "192.168.0.1",
+     "label": "https://news.example"
+    }
+   ],
+   "link_count": 2,
+   "attachments": [],
+   "unsubscribe": {
+    "present": true,
+    "link": "https://news.example/u",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "warn",
+     "title": "Link to a raw IP address",
+     "detail": "https://192.168.0.1:8443/x uses a numeric host instead of a domain."
+    },
+    {
+     "severity": "warn",
+     "title": "Link text masks another domain",
+     "detail": "Text shows news.example but the link goes to 192.168.0.1."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Bulk-mail unsubscribe",
+     "detail": "A List-Unsubscribe method is present (mailing-list style)."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 57,
+   "verdict": "high",
+   "snippet": "p{} Big Sale Get it here . https://news.example"
+  },
+  "links": [
+   {
+    "url": "https://news.example/sale",
+    "domain": "news.example",
+    "label": "here"
+   },
+   {
+    "url": "https://192.168.0.1:8443/x",
+    "domain": "192.168.0.1",
+    "label": "https://news.example"
+   }
+  ],
+  "walk": [
+   {
+    "type": "text/html",
+    "filename": null,
+    "disposition": null,
+    "charset": "utf-8"
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": "Weekly newsletter - 20% off"
+ },
+ "lone_cr": {
+  "header_view": {
+   "subject": "CR only",
+   "from_name": "",
+   "from_addr": "cr@example.com",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "line one\rline two http://cr.example/a)\r",
+   "html_body": "",
+   "attachments": [],
+   "snippet": "line one line two http://cr.example/a)"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "CR only",
+   "from_name": "",
+   "from_addr": "cr@example.com",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "example.com",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [
+    {
+     "url": "http://cr.example/a",
+     "domain": "cr.example",
+     "label": ""
+    }
+   ],
+   "link_count": 1,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": "line one line two http://cr.example/a)"
+  },
+  "links": [
+   {
+    "url": "http://cr.example/a",
+    "domain": "cr.example",
+    "label": ""
+   }
+  ],
+  "walk": [
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": "CR only"
+ },
+ "missing_close": {
+  "header_view": {
+   "subject": "Missing close",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "café text",
+   "html_body": "",
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "page.html",
+     "content_type": "text/html",
+     "size": 51
+    }
+   ],
+   "snippet": "café text"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Missing close",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "b.example",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "page.html",
+     "content_type": "text/html",
+     "size": 51
+    }
+   ],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": "café text"
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": "x-unknown-charset"
+   },
+   {
+    "type": "text/html",
+    "filename": "page.html",
+    "disposition": "attachment",
+    "charset": null
+   }
+  ],
+  "payloads": [
+   {
+    "filename": "page.html",
+    "content_type": "text/html",
+    "content_b64": "PHA+YXR0YWNoZWQgaHRtbDwvcD4NCi0tYm5vdCBhIGJvdW5kYXJ5DQpzdGlsbCBodG1s"
+   },
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": "Missing close"
+ },
+ "nested": {
+  "header_view": {
+   "subject": "Your order",
+   "from_name": "Shop",
+   "from_addr": "orders@shop.example",
+   "to": "me@example.com",
+   "cc": "",
+   "date": "2025-01-01T12:00:00+01:00",
+   "message_id": "<order@shop.example>",
+   "text_body": "Café crème soft break. Visit https://shop.example/order/1.",
+   "html_body": "<html><body><p>Hello&nbsp;<b>there</b></p><a href=\"https://evil.example/track\">https://shop.example/account</a> <A HREF='http://xn--shp-qla.example/'>Shop</a> <a class=\"x\" href=https://shop.example/ok>  <span>https://www.shop.example/ok</span> </a><a href=\"mailto:x@y\">mail</a><a href=\"http://user:pw@Host.Example:8080/p\">cred</a></body></html>",
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "é.pdf",
+     "content_type": "application/pdf",
+     "size": 9
+    },
+    {
+     "index": 1,
+     "filename": "réport.pdf.js",
+     "content_type": "application/javascript",
+     "size": 8
+    },
+    {
+     "index": 2,
+     "filename": "attachment-3",
+     "content_type": "text/plain",
+     "size": 9
+    },
+    {
+     "index": 3,
+     "filename": "logo.png",
+     "content_type": "image/png",
+     "size": 8
+    },
+    {
+     "index": 4,
+     "filename": "archive.tar.zip",
+     "content_type": "application/zip",
+     "size": 2
+    },
+    {
+     "index": 5,
+     "filename": "fwd.eml",
+     "content_type": "message/rfc822",
+     "size": 59
+    },
+    {
+     "index": 6,
+     "filename": "setup.EXE",
+     "content_type": "application/x-msdownload",
+     "size": 2
+    }
+   ],
+   "snippet": "Café crème soft break. Visit https://shop.example/order/1."
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Your order",
+   "from_name": "Shop",
+   "from_addr": "orders@shop.example",
+   "to": "me@example.com",
+   "date": "2025-01-01T12:00:00+01:00",
+   "message_id": "<order@shop.example>",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "shop.example",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "shop.example",
+    "x_mailer": "ShopMailer 1.0",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [
+    {
+     "url": "https://shop.example/order/1",
+     "domain": "shop.example",
+     "label": ""
+    },
+    {
+     "url": "https://evil.example/track",
+     "domain": "evil.example",
+     "label": "https://shop.example/account"
+    },
+    {
+     "url": "http://xn--shp-qla.example/",
+     "domain": "xn--shp-qla.example",
+     "label": "Shop"
+    },
+    {
+     "url": "https://shop.example/ok",
+     "domain": "shop.example",
+     "label": "https://www.shop.example/ok"
+    },
+    {
+     "url": "http://user:pw@Host.Example:8080/p",
+     "domain": "host.example",
+     "label": "cred"
+    }
+   ],
+   "link_count": 5,
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "é.pdf",
+     "content_type": "application/pdf",
+     "size": 9
+    },
+    {
+     "index": 1,
+     "filename": "réport.pdf.js",
+     "content_type": "application/javascript",
+     "size": 8
+    },
+    {
+     "index": 2,
+     "filename": "attachment-3",
+     "content_type": "text/plain",
+     "size": 9
+    },
+    {
+     "index": 3,
+     "filename": "logo.png",
+     "content_type": "image/png",
+     "size": 8
+    },
+    {
+     "index": 4,
+     "filename": "archive.tar.zip",
+     "content_type": "application/zip",
+     "size": 2
+    },
+    {
+     "index": 5,
+     "filename": "fwd.eml",
+     "content_type": "message/rfc822",
+     "size": 59
+    },
+    {
+     "index": 6,
+     "filename": "setup.EXE",
+     "content_type": "application/x-msdownload",
+     "size": 2
+    }
+   ],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "alert",
+     "title": "Risky attachment type",
+     "detail": "Potentially dangerous attachment(s): réport.pdf.js, setup.EXE."
+    },
+    {
+     "severity": "warn",
+     "title": "Link text masks another domain",
+     "detail": "Text shows shop.example but the link goes to evil.example."
+    },
+    {
+     "severity": "warn",
+     "title": "Punycode link domain",
+     "detail": "xn--shp-qla.example may be a lookalike (internationalized) domain."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    }
+   ],
+   "risk_score": 73,
+   "verdict": "high",
+   "snippet": "Café crème soft break. Visit https://shop.example/order/1."
+  },
+  "links": [
+   {
+    "url": "https://shop.example/order/1",
+    "domain": "shop.example",
+    "label": ""
+   },
+   {
+    "url": "https://evil.example/track",
+    "domain": "evil.example",
+    "label": "https://shop.example/account"
+   },
+   {
+    "url": "http://xn--shp-qla.example/",
+    "domain": "xn--shp-qla.example",
+    "label": "Shop"
+   },
+   {
+    "url": "https://shop.example/ok",
+    "domain": "shop.example",
+    "label": "https://www.shop.example/ok"
+   },
+   {
+    "url": "http://user:pw@Host.Example:8080/p",
+    "domain": "host.example",
+    "label": "cred"
+   }
+  ],
+  "walk": [
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "multipart/alternative",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": "iso-8859-1"
+   },
+   {
+    "type": "text/html",
+    "filename": null,
+    "disposition": null,
+    "charset": "utf-8"
+   },
+   {
+    "type": "application/pdf",
+    "filename": "é.pdf",
+    "disposition": "attachment",
+    "charset": null
+   },
+   {
+    "type": "application/javascript",
+    "filename": "réport.pdf.js",
+    "disposition": "attachment",
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": "attachment",
+    "charset": "windows-1252"
+   },
+   {
+    "type": "image/png",
+    "filename": "logo.png",
+    "disposition": "inline",
+    "charset": null
+   },
+   {
+    "type": "application/zip",
+    "filename": "archive.tar.zip",
+    "disposition": "attachment",
+    "charset": null
+   },
+   {
+    "type": "message/rfc822",
+    "filename": "fwd.eml",
+    "disposition": "attachment",
+    "charset": null
+   },
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "application/x-msdownload",
+    "filename": "setup.EXE",
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   {
+    "filename": "é.pdf",
+    "content_type": "application/pdf",
+    "content_b64": "JVBERi0xLjQK"
+   },
+   {
+    "filename": "réport.pdf.js",
+    "content_type": "application/javascript",
+    "content_b64": "YWxlcnQoMSk="
+   },
+   {
+    "filename": "attachment-3",
+    "content_type": "text/plain",
+    "content_b64": "cHJpY2UggCA1"
+   },
+   {
+    "filename": "logo.png",
+    "content_type": "image/png",
+    "content_b64": "iVBORw0KGgo="
+   },
+   {
+    "filename": "archive.tar.zip",
+    "content_type": "application/zip",
+    "content_b64": "UEs="
+   },
+   {
+    "filename": "fwd.eml",
+    "content_type": "message/rfc822",
+    "content_b64": null
+   },
+   {
+    "filename": "setup.EXE",
+    "content_type": "application/x-msdownload",
+    "content_b64": "TVo="
+   },
+   null
+  ],
+  "addresses_to": [
+   {
+    "name": "",
+    "address": "me@example.com"
+   }
+  ],
+  "addresses_cc": [],
+  "subject_header": "Your order"
+ },
+ "no_boundary": {
+  "header_view": {
+   "subject": "",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "",
+   "html_body": "",
+   "attachments": [],
+   "snippet": ""
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "b.example",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": ""
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": null
+ },
+ "no_headers": {
+  "header_view": {
+   "subject": "",
+   "from_name": "",
+   "from_addr": "",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "just some text without headers\nhttp://example.com/x\n",
+   "html_body": "",
+   "attachments": [],
+   "snippet": "just some text without headers http://example.com/x"
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "",
+   "from_name": "",
+   "from_addr": "",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [
+    {
+     "url": "http://example.com/x",
+     "domain": "example.com",
+     "label": ""
+    }
+   ],
+   "link_count": 1,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": "just some text without headers http://example.com/x"
+  },
+  "links": [
+   {
+    "url": "http://example.com/x",
+    "domain": "example.com",
+    "label": ""
+   }
+  ],
+  "walk": [
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": null
+ },
+ "sample_phish": {
+  "header_view": {
+   "subject": "Urgent: verify your account",
+   "from_name": "Bank Support <support@bank.example>",
+   "from_addr": "forged@evil.example",
+   "to": "user@example.com",
+   "cc": "",
+   "date": "2026-10-13T09:59:40+00:00",
+   "message_id": "<deadbeef@evil.example>",
+   "text_body": "Click http://185.10.20.30/login to verify.\nAlso see https://bank.example/secure and https://xn--bnk-xua.example/.\n",
+   "html_body": "<a href=\"http://185.10.20.30/login\">https://bank.example</a>\n",
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "invoice.pdf.exe",
+     "content_type": "application/octet-stream",
+     "size": 2
+    }
+   ],
+   "snippet": "Click http://185.10.20.30/login to verify. Also see https://bank.example/secure and https://xn--bnk-xua.example/."
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "Urgent: verify your account",
+   "from_name": "Bank Support <support@bank.example>",
+   "from_addr": "forged@evil.example",
+   "to": "user@example.com",
+   "date": "2026-10-13T09:59:40+00:00",
+   "message_id": "<deadbeef@evil.example>",
+   "authentication": {
+    "spf": "fail",
+    "dkim": "none",
+    "dmarc": "fail",
+    "raw": [
+     "mx.example.com;        spf=fail smtp.mailfrom=evil.example;        dkim=none;        dmarc=fail header.from=bank.example"
+    ]
+   },
+   "sender": {
+    "from_domain": "evil.example",
+    "reply_to": "helpdesk@other.example",
+    "return_path": "bounce@bounces.example",
+    "message_id_domain": "evil.example",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 2,
+    "delivery_seconds": 15.0,
+    "hops": [
+     {
+      "index": 0,
+      "from": "mail.evil.example",
+      "by": "mx.example.com",
+      "with": "ESMTPS",
+      "for": "",
+      "timestamp": "2026-10-13T10:00:05+00:00"
+     },
+     {
+      "index": 1,
+      "from": "phishing.host",
+      "by": "mail.evil.example",
+      "with": "SMTP",
+      "for": "",
+      "timestamp": "2026-10-13T09:59:50+00:00"
+     }
+    ]
+   },
+   "links": [
+    {
+     "url": "http://185.10.20.30/login",
+     "domain": "185.10.20.30",
+     "label": "https://bank.example"
+    },
+    {
+     "url": "https://bank.example/secure",
+     "domain": "bank.example",
+     "label": ""
+    },
+    {
+     "url": "https://xn--bnk-xua.example/",
+     "domain": "xn--bnk-xua.example",
+     "label": ""
+    }
+   ],
+   "link_count": 3,
+   "attachments": [
+    {
+     "index": 0,
+     "filename": "invoice.pdf.exe",
+     "content_type": "application/octet-stream",
+     "size": 2
+    }
+   ],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "alert",
+     "title": "SPF failed",
+     "detail": "SPF reported 'fail' - the message may be forged."
+    },
+    {
+     "severity": "alert",
+     "title": "DMARC failed",
+     "detail": "DMARC reported 'fail' - the message may be forged."
+    },
+    {
+     "severity": "alert",
+     "title": "Display-name spoofing",
+     "detail": "The display name contains 'support@bank.example' but the actual sender is 'forged@evil.example'."
+    },
+    {
+     "severity": "alert",
+     "title": "Risky attachment type",
+     "detail": "Potentially dangerous attachment(s): invoice.pdf.exe."
+    },
+    {
+     "severity": "warn",
+     "title": "Return-Path domain differs",
+     "detail": "Bounces go to bounces.example but the visible sender is evil.example."
+    },
+    {
+     "severity": "warn",
+     "title": "Replies go elsewhere",
+     "detail": "Reply-To points at other.example, not the sender domain evil.example."
+    },
+    {
+     "severity": "warn",
+     "title": "Link to a raw IP address",
+     "detail": "http://185.10.20.30/login uses a numeric host instead of a domain."
+    },
+    {
+     "severity": "warn",
+     "title": "Link text masks another domain",
+     "detail": "Text shows bank.example but the link goes to 185.10.20.30."
+    },
+    {
+     "severity": "warn",
+     "title": "Punycode link domain",
+     "detail": "xn--bnk-xua.example may be a lookalike (internationalized) domain."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    }
+   ],
+   "risk_score": 100,
+   "verdict": "high",
+   "snippet": "Click http://185.10.20.30/login to verify. Also see https://bank.example/secure and https://xn--bnk-xua.example/."
+  },
+  "links": [
+   {
+    "url": "http://185.10.20.30/login",
+    "domain": "185.10.20.30",
+    "label": "https://bank.example"
+   },
+   {
+    "url": "https://bank.example/secure",
+    "domain": "bank.example",
+    "label": ""
+   },
+   {
+    "url": "https://xn--bnk-xua.example/",
+    "domain": "xn--bnk-xua.example",
+    "label": ""
+   }
+  ],
+  "walk": [
+   {
+    "type": "multipart/mixed",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   },
+   {
+    "type": "text/plain",
+    "filename": null,
+    "disposition": null,
+    "charset": "utf-8"
+   },
+   {
+    "type": "text/html",
+    "filename": null,
+    "disposition": null,
+    "charset": "utf-8"
+   },
+   {
+    "type": "application/octet-stream",
+    "filename": "invoice.pdf.exe",
+    "disposition": "attachment",
+    "charset": null
+   }
+  ],
+  "payloads": [
+   {
+    "filename": "invoice.pdf.exe",
+    "content_type": "application/octet-stream",
+    "content_b64": "TVo="
+   },
+   null
+  ],
+  "addresses_to": [
+   {
+    "name": "",
+    "address": "user@example.com"
+   }
+  ],
+  "addresses_cc": [],
+  "subject_header": "Urgent: verify your account"
+ },
+ "start_boundary_missing": {
+  "header_view": {
+   "subject": "",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "cc": "",
+   "date": null,
+   "message_id": "",
+   "text_body": "",
+   "html_body": "",
+   "attachments": [],
+   "snippet": ""
+  },
+  "audit": {
+   "account": "me@example.com",
+   "subject": "",
+   "from_name": "",
+   "from_addr": "a@b.example",
+   "to": "",
+   "date": null,
+   "message_id": "",
+   "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "none",
+    "raw": []
+   },
+   "sender": {
+    "from_domain": "b.example",
+    "reply_to": "",
+    "return_path": "",
+    "message_id_domain": "",
+    "x_mailer": "",
+    "importance": ""
+   },
+   "routing": {
+    "hop_count": 0,
+    "delivery_seconds": null,
+    "hops": []
+   },
+   "links": [],
+   "link_count": 0,
+   "attachments": [],
+   "unsubscribe": {
+    "present": false,
+    "link": "",
+    "one_click": false
+   },
+   "findings": [
+    {
+     "severity": "warn",
+     "title": "Missing Message-ID",
+     "detail": "Well-behaved mail agents almost always add a Message-ID."
+    },
+    {
+     "severity": "info",
+     "title": "SPF not reported",
+     "detail": "No SPF verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DKIM not reported",
+     "detail": "No DKIM verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "DMARC not reported",
+     "detail": "No DMARC verdict was recorded by the receiving server."
+    },
+    {
+     "severity": "info",
+     "title": "No Received headers",
+     "detail": "The routing chain was stripped or never recorded."
+    },
+    {
+     "severity": "info",
+     "title": "Minimal headers",
+     "detail": "No X-Mailer or routing metadata to corroborate origin."
+    }
+   ],
+   "risk_score": 25,
+   "verdict": "medium",
+   "snippet": ""
+  },
+  "links": [],
+  "walk": [
+   {
+    "type": "multipart/alternative",
+    "filename": null,
+    "disposition": null,
+    "charset": null
+   }
+  ],
+  "payloads": [
+   null
+  ],
+  "addresses_to": [],
+  "addresses_cc": [],
+  "subject_header": null
+ }
+}

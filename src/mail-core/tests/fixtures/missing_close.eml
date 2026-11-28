@@ -1,0 +1,16 @@
+From: a@b.example
+Subject: Missing close
+Content-Type: multipart/mixed; boundary="b"
+
+--b
+--b
+Content-Type: text/plain; charset=x-unknown-charset
+
+café text
+--b 
+Content-Type: text/html
+Content-Disposition: attachment; filename="page.html"
+
+<p>attached html</p>
+--bnot a boundary
+still html

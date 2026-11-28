@@ -1,0 +1,6 @@
+{
+  "name": "thunderbird-webmail-app-sources",
+  "private": true,
+  "type": "module",
+  "description": "React app sources (Vite root). Install, build and test from the parent folder src/extension; see ../README.md."
+}

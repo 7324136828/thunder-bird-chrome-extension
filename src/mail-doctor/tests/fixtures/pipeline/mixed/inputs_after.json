@@ -1,0 +1,16 @@
+[
+  "aliases.json",
+  "annotations.json",
+  "archive.zip",
+  "archive_extracted/Upper.eml",
+  "archive_extracted/annotations.json",
+  "archive_extracted/zipped.eml",
+  "badchars.eml",
+  "digest.eml",
+  "encoded.eml",
+  "human.eml",
+  "inject.eml",
+  "list.mbox",
+  "nodate.eml",
+  "qp.eml"
+]

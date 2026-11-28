@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-11-27T05:07:05.811930+00:00",
+  "total_senders": 2,
+  "action_counts": {
+    "unsubscribe_and_purge": 1,
+    "unsubscribe": 0,
+    "review_delete": 0,
+    "review": 0,
+    "archive": 0,
+    "keep": 1
+  },
+  "items": [
+    {
+      "sender_group": "example.com",
+      "recommended_action": "unsubscribe_and_purge",
+      "message_count": 12,
+      "total_size_bytes": 3946,
+      "first_seen": "2024-08-05T10:00:00+00:00",
+      "last_seen": "2024-08-05T10:11:00+00:00",
+      "has_unsubscribe": true,
+      "unsubscribe_link": "https://mail.example.com/unsub?token=0",
+      "addresses": [
+        "news@mail.example.com"
+      ],
+      "reason": "High-volume sender advertising unsubscribe",
+      "note": ""
+    },
+    {
+      "sender_group": "friends.org",
+      "recommended_action": "keep",
+      "message_count": 1,
+      "total_size_bytes": 253,
+      "first_seen": "2024-08-06T09:15:00+00:00",
+      "last_seen": "2024-08-06T09:15:00+00:00",
+      "has_unsubscribe": false,
+      "unsubscribe_link": "",
+      "addresses": [
+        "alice@friends.org"
+      ],
+      "reason": "Low-volume human sender",
+      "note": ""
+    }
+  ]
+}

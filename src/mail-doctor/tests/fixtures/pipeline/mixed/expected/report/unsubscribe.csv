@@ -1,0 +1,4 @@
+sender_group,addresses,message_count,unsubscribe_link
+example.com,news@mail.example.com,2,https://mail.example.com/unsub?token=7
+group.example,j@umlaut.de;john.smith@corp.example.com,2,https://plain.example.com/unsub
+example.co.uk,offers@mailer.shop.example.co.uk,1,mailto:unsub@shop.example.co.uk

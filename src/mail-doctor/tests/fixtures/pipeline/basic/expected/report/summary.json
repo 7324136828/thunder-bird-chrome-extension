@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-11-27T05:07:05.805892+00:00",
+  "total_messages": 13,
+  "unique_senders": 2,
+  "unique_domains": 2,
+  "date_range": {
+    "first": "2024-08-05T10:00:00+00:00",
+    "last": "2024-08-06T09:15:00+00:00"
+  },
+  "total_size_bytes": 4199,
+  "messages_with_unsubscribe": 12,
+  "senders_with_unsubscribe": 1,
+  "top_senders": [
+    {
+      "sender": "example.com",
+      "messages": 12,
+      "size_bytes": 3946
+    },
+    {
+      "sender": "friends.org",
+      "messages": 1,
+      "size_bytes": 253
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+[package]
+name = "mail-doctor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Inbox Doctor: audit jobs, report pipeline, metrics and weekly scheduler (port of backend/app/doctor)"
+
+[dependencies]
+mail-core.workspace = true
+mail-proto.workspace = true
+base64.workspace = true
+chrono.workspace = true
+chrono-tz.workspace = true
+hex.workspace = true
+html-escape.workspace = true
+mail-parser.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+thiserror.workspace = true
+url.workspace = true
+uuid.workspace = true
+zip.workspace = true
+idna = "1"
+getrandom = "0.2"
+native-tls = "0.2"
+encoding_rs = "0.8"
+flate2 = "1.1"
+bzip2 = "0.5"
+zstd = "0.13"
+crc32fast = "1.5"
+lzma-rs = "0.3"
+
+[dev-dependencies]
+mail-proto = { workspace = true, features = ["testkit"] }
+tempfile.workspace = true

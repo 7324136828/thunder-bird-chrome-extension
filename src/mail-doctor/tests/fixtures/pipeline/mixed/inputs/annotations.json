@@ -1,0 +1,1 @@
+{"example.org": {"action": "keep", "note": "Friends & family"}, "example.co.uk": "review", "plain.example.com": {"note": 42}, "group.example": {"action": "bogus", "note": ["a", 1, null, true, 1.5]}}

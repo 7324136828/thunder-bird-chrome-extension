@@ -1,0 +1,5 @@
+From: a@b.example
+Subject: s2
+Content-Type: text/plain; name*="utf-8''"
+
+body

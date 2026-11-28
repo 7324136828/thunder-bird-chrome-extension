@@ -1,0 +1,14 @@
+date,from,sender_group,subject,snippet
+2024-08-06T09:15:00+00:00,Alice Smith,friends.org,Lunch on Friday?,Are you still up for lunch on Friday?
+2024-08-05T10:11:00+00:00,Newsletter Bot,example.com,Weekly digest 11,"Hello, here is your weekly digest number 11."
+2024-08-05T10:10:00+00:00,Newsletter Bot,example.com,Weekly digest 10,"Hello, here is your weekly digest number 10."
+2024-08-05T10:09:00+00:00,Newsletter Bot,example.com,Weekly digest 9,"Hello, here is your weekly digest number 9."
+2024-08-05T10:08:00+00:00,Newsletter Bot,example.com,Weekly digest 8,"Hello, here is your weekly digest number 8."
+2024-08-05T10:07:00+00:00,Newsletter Bot,example.com,Weekly digest 7,"Hello, here is your weekly digest number 7."
+2024-08-05T10:06:00+00:00,Newsletter Bot,example.com,Weekly digest 6,"Hello, here is your weekly digest number 6."
+2024-08-05T10:05:00+00:00,Newsletter Bot,example.com,Weekly digest 5,"Hello, here is your weekly digest number 5."
+2024-08-05T10:04:00+00:00,Newsletter Bot,example.com,Weekly digest 4,"Hello, here is your weekly digest number 4."
+2024-08-05T10:03:00+00:00,Newsletter Bot,example.com,Weekly digest 3,"Hello, here is your weekly digest number 3."
+2024-08-05T10:02:00+00:00,Newsletter Bot,example.com,Weekly digest 2,"Hello, here is your weekly digest number 2."
+2024-08-05T10:01:00+00:00,Newsletter Bot,example.com,Weekly digest 1,"Hello, here is your weekly digest number 1."
+2024-08-05T10:00:00+00:00,Newsletter Bot,example.com,Weekly digest 0,"Hello, here is your weekly digest number 0."

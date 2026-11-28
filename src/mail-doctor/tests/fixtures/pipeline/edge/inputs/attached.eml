@@ -1,0 +1,13 @@
+From: Fwd <fwd@odd.example>
+Subject: Fwd: attached
+Content-Type: multipart/mixed; boundary="a"
+
+--a
+Content-Type: message/rfc822
+
+From: inner@odd.example
+Subject: inner
+Content-Type: text/plain
+
+forwarded inner text
+--a--

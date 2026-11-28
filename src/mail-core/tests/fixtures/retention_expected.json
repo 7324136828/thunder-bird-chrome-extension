@@ -1,0 +1,775 @@
+{
+ "normalize": [
+  [
+   " Person <PERSON@EXAMPLE.COM> ",
+   "person@example.com",
+   null
+  ],
+  [
+   "Person <person@bücher.example>",
+   "person@xn--bcher-kva.example",
+   null
+  ],
+  [
+   "\"support@bank.example\" <forged@evil.example>",
+   "forged@evil.example",
+   null
+  ],
+  [
+   "person@example.com, second@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "nobody",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "person@@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "Group: person@example.com;",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "Person <person@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "John Q. Public <john@example.com>",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "<person@example.com>",
+   "person@example.com",
+   null
+  ],
+  [
+   "person@example.com (Person)",
+   "person@example.com",
+   null
+  ],
+  [
+   "person @ example.com",
+   "person@example.com",
+   null
+  ],
+  [
+   "\"john doe\"@example.com",
+   null,
+   "Enter a valid recipient email address"
+  ],
+  [
+   "\"john\"@example.com",
+   "john@example.com",
+   null
+  ],
+  [
+   "user@[192.168.0.1]",
+   "user@[192.168.0.1]",
+   null
+  ],
+  [
+   "user@[IPv6:::1]",
+   "user@[ipv6:::1]",
+   null
+  ],
+  [
+   "user@[300.1.1.1]",
+   null,
+   "Enter a valid recipient email domain"
+  ],
+  [
+   "user@example..com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@.example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@example.com.",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@exa_mple.com",
+   null,
+   "Enter a valid recipient email domain"
+  ],
+  [
+   "pérson@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "=?utf-8?q?J=C3=B6rg?= <joerg@example.com>",
+   "joerg@example.com",
+   null
+  ],
+  [
+   "=?utf-8?q?bad=01name?= <x@example.com>",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "<>",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "a@b",
+   "a@b",
+   null
+  ],
+  [
+   "user@-example.com",
+   null,
+   "Enter a valid recipient email domain"
+  ],
+  [
+   "user@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com",
+   null,
+   "Enter a valid recipient email domain"
+  ],
+  [
+   "x <user@EXAMPLE.com> (c)",
+   "user@example.com",
+   null
+  ],
+  [
+   "user@xn--bcher-kva.example",
+   "user@xn--bcher-kva.example",
+   null
+  ],
+  [
+   "user@BÜCHER.example",
+   "user@xn--bcher-kva.example",
+   null
+  ],
+  [
+   "Straße <user@straße.de>",
+   "user@strasse.de",
+   null
+  ],
+  [
+   "user.name+tag@example.com",
+   "user.name+tag@example.com",
+   null
+  ],
+  [
+   "user..name@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   ".user@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@example.com,",
+   "user@example.com",
+   null
+  ],
+  [
+   "user@example.com;",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "a\b@example.com",
+   null,
+   "Recipients must be valid email addresses without control characters"
+  ],
+  [
+   "\"a,b\"@example.com",
+   null,
+   "Enter a valid recipient email address"
+  ],
+  [
+   "\"a b\" <c@d.e>",
+   "c@d.e",
+   null
+  ],
+  [
+   "user@ex ample.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "<user@example.com> trailing",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@example.com <x@y.z>",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "@example.com",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@",
+   null,
+   "Each recipient must contain one email address"
+  ],
+  [
+   "user@。example.com",
+   null,
+   "Enter a valid recipient email domain"
+  ]
+ ],
+ "senders": [
+  [
+   "From: Person <PERSON@example.com>\r\n\r\n",
+   "person@example.com"
+  ],
+  [
+   "From: person@example.com\r\nFrom: second@example.com\r\n\r\n",
+   null
+  ],
+  [
+   "Subject: x\r\n\r\n",
+   null
+  ],
+  [
+   "From: Person\r\n <person@example.com>\r\n\r\n",
+   "person@example.com"
+  ],
+  [
+   "From: JÃ¶rg <joerg@bÃ¼cher.example>\r\n\r\n",
+   "joerg@xn--bcher-kva.example"
+  ],
+  [
+   "From: Bad ÿ <x@example.com>\r\n\r\n",
+   null
+  ],
+  [
+   "From: =?utf-8?q?J=C3=B6rg?= <joerg@example.com>\r\n\r\n",
+   "joerg@example.com"
+  ]
+ ],
+ "classify": [
+  [
+   "Your verification code",
+   "",
+   "verification"
+  ],
+  [
+   "Your verification code",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "Your verification code",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "Reset your password",
+   "",
+   "verification"
+  ],
+  [
+   "Reset your password",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "Reset your password",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "Invoice #123",
+   "",
+   "transactional"
+  ],
+  [
+   "Invoice #123",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "transactional"
+  ],
+  [
+   "Invoice #123",
+   "List-Id: x\r\n",
+   "transactional"
+  ],
+  [
+   "Your order confirmation",
+   "",
+   "transactional"
+  ],
+  [
+   "Your order confirmation",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "transactional"
+  ],
+  [
+   "Your order confirmation",
+   "List-Id: x\r\n",
+   "transactional"
+  ],
+  [
+   "Exclusive offer: 20% off",
+   "",
+   "marketing"
+  ],
+  [
+   "Exclusive offer: 20% off",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Exclusive offer: 20% off",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "Weekly newsletter",
+   "",
+   "marketing"
+  ],
+  [
+   "Weekly newsletter",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Weekly newsletter",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "Product update",
+   "",
+   "updates"
+  ],
+  [
+   "Product update",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Product update",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "New comment on your post",
+   "",
+   "updates"
+  ],
+  [
+   "New comment on your post",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "New comment on your post",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "Can you review this code?",
+   "",
+   "uncategorized"
+  ],
+  [
+   "Can you review this code?",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Can you review this code?",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "Please order the tasks",
+   "",
+   "uncategorized"
+  ],
+  [
+   "Please order the tasks",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Please order the tasks",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "Hello",
+   "",
+   "uncategorized"
+  ],
+  [
+   "Hello",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Hello",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "OTP: 1234",
+   "",
+   "verification"
+  ],
+  [
+   "OTP: 1234",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "OTP: 1234",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "Sign-in code",
+   "",
+   "verification"
+  ],
+  [
+   "Sign-in code",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "Sign-in code",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "signin code",
+   "",
+   "verification"
+  ],
+  [
+   "signin code",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "signin code",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "sale!",
+   "",
+   "marketing"
+  ],
+  [
+   "sale!",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "sale!",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "Wholesale prices",
+   "",
+   "uncategorized"
+  ],
+  [
+   "Wholesale prices",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Wholesale prices",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "50% OFF today",
+   "",
+   "marketing"
+  ],
+  [
+   "50% OFF today",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "50% OFF today",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "save 10%",
+   "",
+   "uncategorized"
+  ],
+  [
+   "save 10%",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "save 10%",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "Security alert",
+   "",
+   "updates"
+  ],
+  [
+   "Security alert",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Security alert",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "Privacy policy update",
+   "",
+   "updates"
+  ],
+  [
+   "Privacy policy update",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "Privacy policy update",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "=?utf-8?q?Verify_your_email?=",
+   "",
+   "verification"
+  ],
+  [
+   "=?utf-8?q?Verify_your_email?=",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "=?utf-8?q?Verify_your_email?=",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "VERIFICATION",
+   "",
+   "verification"
+  ],
+  [
+   "VERIFICATION",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "verification"
+  ],
+  [
+   "VERIFICATION",
+   "List-Id: x\r\n",
+   "verification"
+  ],
+  [
+   "promotional",
+   "",
+   "marketing"
+  ],
+  [
+   "promotional",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "promotional",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "promo",
+   "",
+   "marketing"
+  ],
+  [
+   "promo",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "promo",
+   "List-Id: x\r\n",
+   "marketing"
+  ],
+  [
+   "Payment failed",
+   "",
+   "transactional"
+  ],
+  [
+   "Payment failed",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "transactional"
+  ],
+  [
+   "Payment failed",
+   "List-Id: x\r\n",
+   "transactional"
+  ],
+  [
+   "Refund issued",
+   "",
+   "transactional"
+  ],
+  [
+   "Refund issued",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "transactional"
+  ],
+  [
+   "Refund issued",
+   "List-Id: x\r\n",
+   "transactional"
+  ],
+  [
+   "Booking confirmation",
+   "",
+   "transactional"
+  ],
+  [
+   "Booking confirmation",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "transactional"
+  ],
+  [
+   "Booking confirmation",
+   "List-Id: x\r\n",
+   "transactional"
+  ],
+  [
+   "notifications",
+   "",
+   "uncategorized"
+  ],
+  [
+   "notifications",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "notifications",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "ésale",
+   "",
+   "uncategorized"
+  ],
+  [
+   "ésale",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "ésale",
+   "List-Id: x\r\n",
+   "updates"
+  ],
+  [
+   "saleé",
+   "",
+   "uncategorized"
+  ],
+  [
+   "saleé",
+   "List-Unsubscribe: <x>\r\nPrecedence: Bulk \r\n",
+   "marketing"
+  ],
+  [
+   "saleé",
+   "List-Id: x\r\n",
+   "updates"
+  ]
+ ],
+ "uid_validity": [
+  [
+   "99",
+   "99"
+  ],
+  [
+   " 42 ",
+   "42"
+  ],
+  [
+   "0",
+   null
+  ],
+  [
+   "4294967295",
+   "4294967295"
+  ],
+  [
+   "4294967296",
+   null
+  ],
+  [
+   "00001",
+   "1"
+  ],
+  [
+   "12345678901",
+   null
+  ],
+  [
+   "1 UID 2",
+   null
+  ],
+  [
+   "",
+   null
+  ],
+  [
+   "+5",
+   null
+  ],
+  [
+   "١",
+   null
+  ],
+  [
+   "-1",
+   null
+  ],
+  [
+   "7\n",
+   "7"
+  ]
+ ]
+}

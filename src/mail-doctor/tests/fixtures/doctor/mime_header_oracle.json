@@ -1,0 +1,1320 @@
+{
+"ct": [
+[
+"text/plain",
+{
+"str": "text/plain",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=\"utf-8\"",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=\"utf-8",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain (comment",
+{
+"str": "text/plain (comment)",
+"type": "text/plain (comment)",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=utf-8 (unterminated",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=\"utf-8\"junk",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=\"utf-8\" junk; format=flowed",
+{
+"str": "text/plain; charset=\"utf-8\"; format=\"flowed\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": "flowed",
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=\"a\\\"b.txt\"",
+{
+"str": "text/plain; name=\"a\\\"b.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "a\"b.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a\"b.txt"
+}
+],
+[
+"text/plain; name=\"a\\b.txt\"",
+{
+"str": "text/plain; name=\"ab.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "ab.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "ab.txt"
+}
+],
+[
+"text/plain; name=\"a b.txt",
+{
+"str": "text/plain; name=\"a b.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "a b.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a b.txt"
+}
+],
+[
+"text/plain;; charset=utf-8",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset",
+{
+"str": "text/plain; charset",
+"type": "text/plain",
+"charset": "",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; =x; charset=utf-8",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain charset=utf-8",
+{
+"str": "text/plain charset=utf-8",
+"type": "text/plain charset=utf-8",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/html; charset=utf-8; name*=utf-8''na%C3%AFve.html",
+{
+"str": "text/html; charset=\"utf-8\"; name=\"naïve.html\"",
+"type": "text/html",
+"charset": "utf-8",
+"name": "naïve.html",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "naïve.html"
+}
+],
+[
+"text/html; name*=\"utf-8''na%C3%AFve.html\"",
+{
+"str": "text/html; name=\"naïve.html\"",
+"type": "text/html",
+"charset": null,
+"name": "naïve.html",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "naïve.html"
+}
+],
+[
+"text/html; name*0=\"a\"; name*1=\"b.txt\"",
+{
+"str": "text/html; name=\"ab.txt\"",
+"type": "text/html",
+"charset": null,
+"name": "ab.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "ab.txt"
+}
+],
+[
+"text/html; name*0*=utf-8''a%20; name*1=\"b.txt\"",
+{
+"str": "text/html; name=\"a b.txt\"",
+"type": "text/html",
+"charset": null,
+"name": "a b.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a b.txt"
+}
+],
+[
+"text/html; name*1*=\"b.txt\"",
+{
+"str": "text/html; name=\"b.txt\"",
+"type": "text/html",
+"charset": null,
+"name": "b.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "b.txt"
+}
+],
+[
+"text/html; name*=\"plain.txt\"",
+{
+"str": "text/html; name=\"plain.txt\"",
+"type": "text/html",
+"charset": null,
+"name": "plain.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "plain.txt"
+}
+],
+[
+"multipart/mixed; boundary=\"abc",
+{
+"str": "multipart/mixed; boundary=\"abc\"",
+"type": "multipart/mixed",
+"charset": null,
+"name": null,
+"boundary": "abc",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/mixed; boundary=abc (comment) ; charset=x",
+{
+"str": "multipart/mixed; boundary=\"abc\"; charset=\"x\"",
+"type": "multipart/mixed",
+"charset": "x",
+"name": null,
+"boundary": "abc",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/mixed; (c) boundary=\"x y\"",
+{
+"str": "multipart/mixed; boundary=\"x y\"",
+"type": "multipart/mixed",
+"charset": null,
+"name": null,
+"boundary": "x y",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/alternative; boundary=\"==b(1)\"",
+{
+"str": "multipart/alternative; boundary=\"==b(1)\"",
+"type": "multipart/alternative",
+"charset": null,
+"name": null,
+"boundary": "==b(1)",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"(lead) text/plain",
+{
+"str": "(lead) text/plain",
+"type": "(lead) text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text / plain",
+{
+"str": "text / plain",
+"type": "text / plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain/extra",
+{
+"str": "text/plain/extra",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"\"text/plain\"",
+{
+"str": "\"text/plain\"",
+"type": "\"text/plain\"",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text",
+{
+"str": "text",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"/plain",
+{
+"str": "/plain",
+"type": "/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/;charset=x",
+{
+"str": "text/; charset=\"x\"",
+"type": "text/",
+"charset": "x",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset='utf-8'",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=utf-8;",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; a=\"x\\",
+{
+"str": "text/plain; a=\"x\"",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=\"=?utf-8?q?caf=C3=A9?=.txt\"",
+{
+"str": "text/plain; name=\"café.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "café.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "café.txt"
+}
+],
+[
+"text/plain; name==?utf-8?q?caf=C3=A9?=.txt",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"TEXT/Plain; Charset=UTF-8",
+{
+"str": "TEXT/Plain; Charset=\"UTF-8\"",
+"type": "text/plain",
+"charset": "UTF-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; charset=utf-8 ((nested) comment",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; @bad; charset=utf-8",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=a<b>c.txt",
+{
+"str": "text/plain; name=\"a\"",
+"type": "text/plain",
+"charset": null,
+"name": "a",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a"
+}
+],
+[
+"text/plain; name*0*=utf-8'en'%41; name*1*=%42",
+{
+"str": "text/plain; name=\"AB\"",
+"type": "text/plain",
+"charset": null,
+"name": "AB",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "AB"
+}
+],
+[
+"text/plain; name*=utf-8''%41\"; x=y",
+{
+"str": "text/plain; name=\"A\"",
+"type": "text/plain",
+"charset": null,
+"name": "A",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "A"
+}
+],
+[
+"text/plain; name*=\"utf-8''a b\"",
+{
+"str": "text/plain; name=\"a b\"",
+"type": "text/plain",
+"charset": null,
+"name": "a b",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a b"
+}
+],
+[
+"text/plain; charset=utf-8\tformat=flowed",
+{
+"str": "text/plain; charset=\"utf-8\"",
+"type": "text/plain",
+"charset": "utf-8",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name*=\"utf-8''\"",
+{
+"error": "IndexError"
+}
+],
+[
+"text/plain; name*=utf-8''",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name*=''abc",
+{
+"str": "text/plain; name=\"abc\"",
+"type": "text/plain",
+"charset": null,
+"name": "abc",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "abc"
+}
+],
+[
+"text/plain; name*=utf-8'en'",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=\"a\"; name=\"b\"",
+{
+"str": "text/plain; name=\"a\"",
+"type": "text/plain",
+"charset": null,
+"name": "a",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a"
+}
+],
+[
+"text/plain; name*1=\"b\"; name*0=\"a\"",
+{
+"str": "text/plain; name=\"ab\"",
+"type": "text/plain",
+"charset": null,
+"name": "ab",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "ab"
+}
+],
+[
+"text/plain; name*0=\"a\"; name*0=\"z\"; name*1=\"b\"",
+{
+"str": "text/plain; name=\"a\"",
+"type": "text/plain",
+"charset": null,
+"name": "a",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a"
+}
+],
+[
+"text/plain; name=\"a\"; name*0=\"z\"",
+{
+"str": "text/plain; name=\"a\"",
+"type": "text/plain",
+"charset": null,
+"name": "a",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a"
+}
+],
+[
+"text/plain; name*0*=bogus-charset''%41%FF; name*1=x",
+{
+"str": "text/plain; name=\"A�x\"",
+"type": "text/plain",
+"charset": null,
+"name": "A�x",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "A�x"
+}
+],
+[
+"text/plain; name*=utf-8''%FF%41",
+{
+"str": "text/plain; name=\"�A\"",
+"type": "text/plain",
+"charset": null,
+"name": "�A",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "�A"
+}
+],
+[
+"text/plain; name*=iso-8859-1''%E9t%E9",
+{
+"str": "text/plain; name=\"été\"",
+"type": "text/plain",
+"charset": null,
+"name": "été",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "été"
+}
+],
+[
+"text/plain; name*=koi8-r''%F0%D2",
+{
+"str": "text/plain; name=\"Пр\"",
+"type": "text/plain",
+"charset": null,
+"name": "Пр",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "Пр"
+}
+],
+[
+"text/plain; name=café.txt",
+{
+"str": "text/plain; name=\"café.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "café.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "café.txt"
+}
+],
+[
+"text/plain; name=\"café.txt\"",
+{
+"str": "text/plain; name=\"café.txt\"",
+"type": "text/plain",
+"charset": null,
+"name": "café.txt",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "café.txt"
+}
+],
+[
+"text/plain; name*=utf-8''café",
+{
+"str": "text/plain; name=\"café\"",
+"type": "text/plain",
+"charset": null,
+"name": "café",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "café"
+}
+],
+[
+"text/plain; name*0*=\"utf-8''a%20b\"; name*1*=\"%20c\"",
+{
+"str": "text/plain; name=\"a b c\"",
+"type": "text/plain",
+"charset": null,
+"name": "a b c",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a b c"
+}
+],
+[
+"text/plain; name*1*=\"a b\"",
+{
+"str": "text/plain; name=\"a b\"",
+"type": "text/plain",
+"charset": null,
+"name": "a b",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a b"
+}
+],
+[
+"text/plain; name*00=\"a\"",
+{
+"str": "text/plain; name=\"a\"",
+"type": "text/plain",
+"charset": null,
+"name": "a",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a"
+}
+],
+[
+"text/plain; name*=\"''x\"",
+{
+"str": "text/plain; name=\"x\"",
+"type": "text/plain",
+"charset": null,
+"name": "x",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "x"
+}
+],
+[
+"text/plain; name* =x",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name *=x",
+{
+"str": "text/plain; name=\"x\"",
+"type": "text/plain",
+"charset": null,
+"name": "x",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "x"
+}
+],
+[
+"text/plain; name*=  utf-8 ''x",
+{
+"str": "text/plain; name=\"x\"",
+"type": "text/plain",
+"charset": null,
+"name": "x",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "x"
+}
+],
+[
+"text/plain; ;; ;",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; (c)",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=(c)",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=  ",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=\"a\\\\\"",
+{
+"str": "text/plain; name=\"a\\\\\"",
+"type": "text/plain",
+"charset": null,
+"name": "a\\",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "a\\"
+}
+],
+[
+"text/plain; name=\\\"x\\\"",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; a=1; A=2",
+{
+"str": "text/plain; a=\"1\"; A=\"2\"",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain;charset=us-ascii(comment)",
+{
+"str": "text/plain; charset=\"us-ascii\"",
+"type": "text/plain",
+"charset": "us-ascii",
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/mixed; boundary=\"----=_Part_0_1.2\"",
+{
+"str": "multipart/mixed; boundary=\"----=_Part_0_1.2\"",
+"type": "multipart/mixed",
+"charset": null,
+"name": null,
+"boundary": "----=_Part_0_1.2",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/mixed; boundary=----=_Part_0_1.2",
+{
+"str": "multipart/mixed; boundary=\"----\"",
+"type": "multipart/mixed",
+"charset": null,
+"name": null,
+"boundary": "----",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"multipart/related; type=\"text/html\"; boundary=b1",
+{
+"str": "multipart/related; type=\"text/html\"; boundary=\"b1\"",
+"type": "multipart/related",
+"charset": null,
+"name": null,
+"boundary": "b1",
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; =?utf-8?q?x?=",
+{
+"str": "text/plain;",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+],
+[
+"text/plain; name=\"=?utf-8?b?w6k=?=\"",
+{
+"str": "text/plain; name=\"é\"",
+"type": "text/plain",
+"charset": null,
+"name": "é",
+"boundary": null,
+"format": null,
+"x": null,
+"filename": "é"
+}
+],
+[
+"",
+{
+"str": "",
+"type": "text/plain",
+"charset": null,
+"name": null,
+"boundary": null,
+"format": null,
+"x": null,
+"filename": null
+}
+]
+],
+"cd": [
+[
+"attachment",
+{
+"str": "attachment",
+"disposition": "attachment",
+"filename": null
+}
+],
+[
+"attachment; filename=\"a.pdf\"",
+{
+"str": "attachment; filename=\"a.pdf\"",
+"disposition": "attachment",
+"filename": "a.pdf"
+}
+],
+[
+"attachment; filename=\"a.pdf",
+{
+"str": "attachment; filename=\"a.pdf\"",
+"disposition": "attachment",
+"filename": "a.pdf"
+}
+],
+[
+"attachment (note",
+{
+"str": "attachment (note)",
+"disposition": "attachment (note)",
+"filename": null
+}
+],
+[
+"attachment; filename=\"a.pdf\"junk",
+{
+"str": "attachment; filename=\"a.pdf\"",
+"disposition": "attachment",
+"filename": "a.pdf"
+}
+],
+[
+"attachment; filename=a b.pdf",
+{
+"str": "attachment; filename=\"a\"",
+"disposition": "attachment",
+"filename": "a"
+}
+],
+[
+"inline; filename=\"x\\\"y.txt\"",
+{
+"str": "inline; filename=\"x\\\"y.txt\"",
+"disposition": "inline",
+"filename": "x\"y.txt"
+}
+],
+[
+"attachment;filename*=UTF-8''%E2%82%AC.txt",
+{
+"str": "attachment; filename=\"€.txt\"",
+"disposition": "attachment",
+"filename": "€.txt"
+}
+],
+[
+"\"attachment\"; filename=a.txt",
+{
+"str": "\"attachment\"; filename=\"a.txt\"",
+"disposition": "\"attachment\"",
+"filename": "a.txt"
+}
+],
+[
+"attach ment; filename=a.txt",
+{
+"str": "attach ment; filename=\"a.txt\"",
+"disposition": "attach ment",
+"filename": "a.txt"
+}
+],
+[
+"attachment filename=a.txt",
+{
+"str": "attachment filename=a.txt",
+"disposition": "attachment filename=a.txt",
+"filename": null
+}
+],
+[
+"; filename=a.txt",
+{
+"str": "; filename=\"a.txt\"",
+"disposition": "",
+"filename": "a.txt"
+}
+],
+[
+"attachment; filename*0=\"a\"; filename*1=\"b\"",
+{
+"str": "attachment; filename=\"ab\"",
+"disposition": "attachment",
+"filename": "ab"
+}
+],
+[
+"attachment; filename=; size=3",
+{
+"str": "attachment; size=\"3\"",
+"disposition": "attachment",
+"filename": null
+}
+],
+[
+"ATTACHMENT; FILENAME=\"Up.TXT\"",
+{
+"str": "ATTACHMENT; FILENAME=\"Up.TXT\"",
+"disposition": "attachment",
+"filename": "Up.TXT"
+}
+],
+[
+"attachment; filename*=utf-8''%E2%82%AC%20rate.pdf; filename=\"fallback.pdf\"",
+{
+"str": "attachment; filename=\"€ rate.pdf\"",
+"disposition": "attachment",
+"filename": "€ rate.pdf"
+}
+],
+[
+"attachment; filename=\"fallback.pdf\"; filename*=utf-8''%E2%82%AC.pdf",
+{
+"str": "attachment; filename=\"fallback.pdf\"",
+"disposition": "attachment",
+"filename": "fallback.pdf"
+}
+],
+[
+"attachment;",
+{
+"str": "attachment;",
+"disposition": "attachment",
+"filename": null
+}
+],
+[
+"attachment; filename*=\"utf-8''\"",
+{
+"error": "IndexError"
+}
+],
+[
+"attachment ;filename=x",
+{
+"str": "attachment ; filename=\"x\"",
+"disposition": "attachment",
+"filename": "x"
+}
+],
+[
+"inline (c); filename=\"a (b).txt\"",
+{
+"str": "inline (c); filename=\"a (b).txt\"",
+"disposition": "inline (c)",
+"filename": "a (b).txt"
+}
+],
+[
+"attachment; filename=\"tab\there.txt\"",
+{
+"str": "attachment; filename=\"tab\there.txt\"",
+"disposition": "attachment",
+"filename": "tab\there.txt"
+}
+]
+],
+"cte": [
+[
+"base64",
+{
+"str": "base64",
+"cte": "base64"
+}
+],
+[
+" base64",
+{
+"str": "base64",
+"cte": "base64"
+}
+],
+[
+"base64 ",
+{
+"str": "base64 ",
+"cte": "base64"
+}
+],
+[
+"BASE64",
+{
+"str": "BASE64",
+"cte": "base64"
+}
+],
+[
+"base64 (comment)",
+{
+"str": "base64 (comment)",
+"cte": "base64"
+}
+],
+[
+"base64 (comment",
+{
+"str": "base64 (comment)",
+"cte": "base64"
+}
+],
+[
+"base64 junk",
+{
+"str": "base64 junk",
+"cte": "base64"
+}
+],
+[
+"\"base64\"",
+{
+"str": "\"base64\"",
+"cte": "7bit"
+}
+],
+[
+"quoted-printable;",
+{
+"str": "quoted-printable;",
+"cte": "quoted-printable"
+}
+],
+[
+"(c) quoted-printable",
+{
+"str": "(c) quoted-printable",
+"cte": "quoted-printable"
+}
+],
+[
+"x-uuencode",
+{
+"str": "x-uuencode",
+"cte": "x-uuencode"
+}
+],
+[
+"",
+{
+"str": "",
+"cte": "7bit"
+}
+],
+[
+"7bit",
+{
+"str": "7bit",
+"cte": "7bit"
+}
+],
+[
+"base64; x=y",
+{
+"str": "base64; x=y",
+"cte": "base64"
+}
+],
+[
+"/base64",
+{
+"str": "/base64",
+"cte": "7bit"
+}
+]
+]
+}

@@ -1,0 +1,8 @@
+sender_group,recommended_action,message_count,total_size_bytes,first_seen,last_seen,has_unsubscribe,unsubscribe_link,addresses,reason,note
+(unknown),keep,2,252,2024-08-07T00:00:00+00:00,2024-08-07T00:00:00+00:00,no,,,Low-volume human sender,
+example.com,unsubscribe,2,912,2024-08-05T10:00:00+00:00,2024-08-05T10:07:00+00:00,yes,https://mail.example.com/unsub?token=7,news@mail.example.com,Sender advertises an unsubscribe link,
+example.org,keep,2,588,2024-08-06T09:00:00+00:00,2024-08-11T02:30:00+00:00,no,,digest-noreply@lists.example.org;jurgen@example.org,User annotation override,Friends & family
+friends.org,archive,2,506,2024-08-06T09:15:00+00:00,2024-08-06T09:15:00+00:00,no,,alice@friends.org,User annotation override,
+group.example,unsubscribe,2,710,2024-08-08T14:05:09+00:00,2024-08-08T14:05:09+00:00,yes,https://plain.example.com/unsub,j@umlaut.de;john.smith@corp.example.com,Sender advertises an unsubscribe link,"['a', 1, None, True, 1.5]"
+evil.example,keep,1,211,2024-08-10T17:00:00+00:00,2024-08-10T17:00:00+00:00,no,,attacker@evil.example,Low-volume human sender,
+example.co.uk,review,1,1016,2024-08-07T16:30:00+00:00,2024-08-07T16:30:00+00:00,yes,mailto:unsub@shop.example.co.uk,offers@mailer.shop.example.co.uk,User annotation override,

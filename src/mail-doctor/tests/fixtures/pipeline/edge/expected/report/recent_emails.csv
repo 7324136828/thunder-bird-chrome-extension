@@ -1,0 +1,11 @@
+date,from,sender_group,subject,snippet
+2024-08-12T05:00:00+00:00,Signer,example.com,Grüße signed,Smart “quotes” and €uro
+2024-08-11T23:59:59+00:00,Mail Delivery System,example.net,Undelivered Mail Returned to Sender,This is the mail system at host mx.example.net.
+,Fwd,odd.example,Fwd: attached,forwarded inner text
+,B64,odd.example,bad base64,Hello world!
+,Broken,odd.example,no boundary multipart,
+,Noclose,odd.example,missing close boundary,
+,(unknown),(unknown),(no subject),this file has no headers at all just text
+,Crlf Sender,mbox.example,"crlf mbox; with = semicolons; and, commas, in a long header line that keeps going on",CRLF body
+,Second,mbox.example,no blank line before next From,body two
+,Third,mbox.example,third,last

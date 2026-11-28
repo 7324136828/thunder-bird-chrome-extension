@@ -1,0 +1,14 @@
+From: Digest Robot <digest-noreply@lists.example.org>
+To: user@test.local
+Subject: Digest, Vol 1
+Date: 11 Aug 2024 08:00 +0530
+Content-Type: multipart/digest; boundary="dg"
+
+--dg
+
+From: Inner <inner@lists.example.org>
+Subject: inner message
+Content-Type: text/plain
+
+  Inner   digest body text.
+--dg--

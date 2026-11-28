@@ -1,0 +1,10 @@
+From: a@b.example
+Subject: s1
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary=----=_Part_0_1.2
+
+------=_Part_0_1.2
+Content-Type: text/plain
+
+hello part
+------=_Part_0_1.2--

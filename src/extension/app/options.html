@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webmail settings</title>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="page-head">
+        <h1>Webmail settings</h1>
+        <span id="save-status" class="save-status" role="status" aria-live="polite"></span>
+      </header>
+
+      <section class="card" aria-labelledby="backend-title">
+        <h2 id="backend-title">Local mail backend</h2>
+        <p class="hint">
+          The webmail runs against the Rust <code>mail-backend</code> on your own computer. It holds
+          unlocked mail passwords in memory only and talks to your IMAP, POP3 and SMTP servers.
+        </p>
+        <form id="backend-form" class="field" novalidate>
+          <label for="backend-url">Backend address</label>
+          <div class="inline">
+            <input
+              type="text"
+              id="backend-url"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="http://127.0.0.1:48101"
+              aria-describedby="url-error url-hint"
+            />
+            <button type="submit" class="btn primary" id="btn-save">Save</button>
+            <button type="button" class="btn" id="btn-test">Test connection</button>
+            <button type="button" class="btn" id="btn-reset">Use default</button>
+          </div>
+          <p id="url-hint" class="hint">Only plain <code>http://</code> addresses on this computer are accepted: 127.0.0.1 or localhost, any port. Remote backends are refused: mail passwords travel to this address, and the extension may only connect to this computer.</p>
+          <p id="url-error" class="msg error" role="alert" hidden></p>
+        </form>
+        <div id="test-result" class="test-result" aria-live="polite" hidden></div>
+
+        <details class="howto" id="howto">
+          <summary>How to start the backend</summary>
+          <ol>
+            <li>Install Rust from <a href="https://rustup.rs" target="_blank" rel="noopener noreferrer">rustup.rs</a> (once).</li>
+            <li>
+              From the project's <code>src</code> folder run one of:
+              <ul>
+                <li>Windows: <code>run-backend.bat</code> (or <code>powershell -ExecutionPolicy Bypass -File run-backend.ps1</code>)</li>
+                <li>macOS / Linux: <code>./run-backend.sh</code></li>
+                <li>Any system: <code>cargo run --release -p mail-backend</code></li>
+              </ul>
+            </li>
+            <li>Keep it running while you use the webmail. It listens on <code>127.0.0.1:48101</code> by default.</li>
+            <li>Click <em>Test connection</em>.</li>
+          </ol>
+        </details>
+      </section>
+
+      <section class="card" aria-labelledby="open-title">
+        <h2 id="open-title">Open the webmail</h2>
+        <p class="hint">
+          Click the toolbar button, or right-click an email link on any page and choose
+          <strong>Compose with Webmail</strong>.
+        </p>
+        <button type="button" class="btn primary" id="btn-open">Open webmail</button>
+      </section>
+    </main>
+    <script type="module" src="./src/options/options.ts"></script>
+  </body>
+</html>
