@@ -167,7 +167,11 @@ fn header<'a>(headers: &'a reqwest::header::HeaderMap, name: &str) -> Option<&'a
 
 fn tempdir() -> (tempfile::TempDir, PathBuf) {
     let temporary = tempfile::tempdir().unwrap();
-    let root = temporary.path().to_path_buf();
+    // The backend prints the canonical form of its paths. On Windows runners
+    // TEMP is an 8.3 short path (`C:\Users\RUNNER~1\...`) that canonicalizes
+    // to the long name, so compare against the same resolved form.
+    let root = mail_core::settings::resolve_path(temporary.path())
+        .unwrap_or_else(|_| temporary.path().to_path_buf());
     (temporary, root)
 }
 
