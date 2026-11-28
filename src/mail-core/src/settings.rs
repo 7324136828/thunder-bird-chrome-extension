@@ -617,7 +617,7 @@ pub fn write_json(path: &Path, values: &Value, overwrite: bool) -> io::Result<()
         file.flush()?;
         drop(file);
         if overwrite {
-            return fs::rename(&temporary_path, path);
+            return rename_replacing(&temporary_path, path);
         }
         match fs::hard_link(&temporary_path, path) {
             Ok(()) => Ok(()),
@@ -630,6 +630,31 @@ pub fn write_json(path: &Path, values: &Value, overwrite: bool) -> io::Result<()
     })();
     let _ = fs::remove_file(&temporary_path);
     result
+}
+
+/// `rename` over an existing file.
+///
+/// On Windows this transiently fails with `PermissionDenied` ("Access is
+/// denied", os error 5) while another process (antivirus, search indexer, a
+/// concurrent reader) has the destination open without `FILE_SHARE_DELETE`.
+/// A short bounded retry (about 180 ms in total) rides that out; any other
+/// error, and a persistent denial, is returned unchanged.
+fn rename_replacing(from: &Path, to: &Path) -> io::Result<()> {
+    const MAX_RETRIES: u64 = 8;
+    let mut attempt = 0;
+    loop {
+        match fs::rename(from, to) {
+            Err(error)
+                if cfg!(windows)
+                    && error.kind() == io::ErrorKind::PermissionDenied
+                    && attempt < MAX_RETRIES =>
+            {
+                attempt += 1;
+                std::thread::sleep(std::time::Duration::from_millis(5 * attempt));
+            }
+            result => return result,
+        }
+    }
 }
 
 fn create_temporary_file(directory: &Path) -> io::Result<(PathBuf, fs::File)> {

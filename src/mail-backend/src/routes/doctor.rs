@@ -166,12 +166,27 @@ fn runner(state: &AppState) -> JobRunner {
 /// The content of one uploaded file.
 enum Spool {
     Memory(Vec<u8>),
-    /// An anonymous temporary file ([`tempfile::tempfile`]): created with
-    /// owner-only permissions (0600 on Unix), never linked under a guessable
+    /// An anonymous temporary file ([`private_tempfile`]): owner-only
+    /// permissions (0600 on Unix, set explicitly), never linked under a guessable
     /// name (`O_TMPFILE` / unlinked on Unix, `FILE_FLAG_DELETE_ON_CLOSE` on
     /// Windows) and removed by the OS once the last handle is closed, even
     /// when the process dies. Positioned at the start of the content.
     File(std::fs::File),
+}
+
+/// An anonymous temporary file that is private to the owner.
+///
+/// [`tempfile::tempfile`] only guarantees 0600 on its fallback path: on Linux
+/// it opens with `O_TMPFILE` and the default mode (0666 & !umask, typically
+/// 0644). The mode is therefore set explicitly (`fchmod` on the open handle).
+fn private_tempfile() -> std::io::Result<std::fs::File> {
+    let file = tempfile::tempfile()?;
+    #[cfg(unix)]
+    {
+        use std::os::unix::fs::PermissionsExt;
+        file.set_permissions(std::fs::Permissions::from_mode(0o600))?;
+    }
+    Ok(file)
 }
 
 /// Spool writer: memory first, a temporary file past [`SPOOL_MEMORY_BYTES`].
@@ -196,7 +211,7 @@ impl SpoolWriter {
         let file = match self.file.as_mut() {
             Some(file) => file,
             None => {
-                let spooled = tokio::task::spawn_blocking(tempfile::tempfile)
+                let spooled = tokio::task::spawn_blocking(private_tempfile)
                     .await
                     .map_err(std::io::Error::other)??;
                 let mut file = tokio::fs::File::from_std(spooled);
