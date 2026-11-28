@@ -146,8 +146,10 @@ impl Fixture {
                 job.status.as_str(),
                 "completed" | "healthy" | "failed" | "discarded"
             ) {
+                // The worker may still append its final log lines after the
+                // status turns terminal, so re-read once it is idle.
                 self.runner.wait_idle(Duration::from_secs(5));
-                return job;
+                return self.runner.get_job(job_id).unwrap();
             }
             assert!(Instant::now() < deadline, "job did not finish: {job:?}");
             std::thread::sleep(Duration::from_millis(20));
